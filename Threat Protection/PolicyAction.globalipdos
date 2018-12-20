@@ -1,0 +1,37 @@
+{
+  "id" : "globalipdos",
+  "names" : [ {
+    "value" : "Global Denial of Service",
+    "locale" : "en"
+  } ],
+  "templateKey" : "globalipdos",
+  "parameters" : [ {
+    "templateKey" : "limitBy",
+    "values" : [ "GLOBALIP" ]
+  }, {
+    "templateKey" : "isDOSEnabled",
+    "values" : [ "false" ]
+  }, {
+    "templateKey" : "maximumRequests",
+    "values" : [ "12" ]
+  }, {
+    "templateKey" : "requestsPerSeconds",
+    "values" : [ "12" ]
+  }, {
+    "templateKey" : "inProgressRequests",
+    "values" : [ "12" ]
+  }, {
+    "templateKey" : "whenLimitExceeds",
+    "values" : [ "Block" ]
+  }, {
+    "templateKey" : "blockInterval",
+    "values" : [ "1" ]
+  }, {
+    "templateKey" : "customErrorMessage",
+    "values" : [ "assa" ]
+  }, {
+    "templateKey" : "trustedIPRange",
+    "values" : [ ]
+  } ],
+  "active" : false
+}

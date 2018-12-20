@@ -1,0 +1,41 @@
+{
+  "id" : "811f6aef-a4e6-4091-b50d-58e97794a53f",
+  "names" : [ {
+    "value" : "Default Policy for API carpark",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "6bbc91ad-3719-4cf8-9cf9-fae49c16a457"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "eb51c99f-f973-438e-bd25-86cc92878d0a"
+    } ],
+    "stageKey" : "LMT"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "e590d89d-4ecc-4d32-8f7a-cb82fe00f431"
+    }, {
+      "enforcementObjectId" : "1817ce6c-4915-41c3-9b77-98d7a7055822"
+    } ],
+    "stageKey" : "IAM"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "80df23d3-92cc-4652-a132-924cd23b2696"
+    } ],
+    "stageKey" : "transport"
+  } ],
+  "policyScope" : "SERVICE",
+  "global" : false,
+  "active" : false,
+  "systemPolicy" : false
+}

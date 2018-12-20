@@ -1,0 +1,26 @@
+{
+  "id" : "b01da3b8-4656-400e-bab5-a441d4832cd1",
+  "names" : [ {
+    "value" : "Payment APIs for free",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "Default policy for the package ",
+    "locale" : "English"
+  } ],
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "bf0c191b-c5da-4ba6-817f-693467fd60ab"
+    } ],
+    "stageKey" : "IAM"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "bd78a244-fcd4-4a3f-a28f-ac1b96f61c0e"
+    } ],
+    "stageKey" : "LMT"
+  } ],
+  "policyScope" : "PACKAGE",
+  "global" : false,
+  "active" : false,
+  "systemPolicy" : false
+}

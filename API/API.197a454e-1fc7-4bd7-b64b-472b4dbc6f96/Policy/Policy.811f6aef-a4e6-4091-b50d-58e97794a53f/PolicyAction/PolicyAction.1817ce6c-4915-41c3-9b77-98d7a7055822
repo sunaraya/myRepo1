@@ -1,0 +1,13 @@
+{
+  "id" : "1817ce6c-4915-41c3-9b77-98d7a7055822",
+  "names" : [ {
+    "value" : "Authorize User",
+    "locale" : "en"
+  } ],
+  "templateKey" : "authorizeUser",
+  "parameters" : [ {
+    "templateKey" : "users",
+    "values" : [ "Administrator" ]
+  } ],
+  "active" : false
+}

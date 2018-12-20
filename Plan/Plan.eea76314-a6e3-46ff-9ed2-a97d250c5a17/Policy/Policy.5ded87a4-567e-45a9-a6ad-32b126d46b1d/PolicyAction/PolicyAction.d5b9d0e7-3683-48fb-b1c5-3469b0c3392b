@@ -1,0 +1,43 @@
+{
+  "id" : "d5b9d0e7-3683-48fb-b1c5-3469b0c3392b",
+  "names" : [ {
+    "value" : "Throttling Traffic Optimization",
+    "locale" : "en"
+  } ],
+  "templateKey" : "throttle",
+  "parameters" : [ {
+    "templateKey" : "throttleRule",
+    "parameters" : [ {
+      "templateKey" : "throttleRuleName",
+      "values" : [ "requestCount" ]
+    }, {
+      "templateKey" : "monitorRuleOperator",
+      "values" : [ "GT" ]
+    }, {
+      "templateKey" : "value",
+      "values" : [ "1000" ]
+    } ]
+  }, {
+    "templateKey" : "destination",
+    "parameters" : [ {
+      "templateKey" : "destinationType",
+      "values" : [ "GATEWAY" ]
+    } ]
+  }, {
+    "templateKey" : "alertInterval",
+    "values" : [ "1" ]
+  }, {
+    "templateKey" : "alertIntervalUnit",
+    "values" : [ "days" ]
+  }, {
+    "templateKey" : "alertFrequency",
+    "values" : [ "always" ]
+  }, {
+    "templateKey" : "alertMessage",
+    "values" : [ "You have exceeded the free limit. Contact us for upgrading your package" ]
+  }, {
+    "templateKey" : "consumerIds",
+    "values" : [ "AnyConsumers" ]
+  } ],
+  "active" : false
+}

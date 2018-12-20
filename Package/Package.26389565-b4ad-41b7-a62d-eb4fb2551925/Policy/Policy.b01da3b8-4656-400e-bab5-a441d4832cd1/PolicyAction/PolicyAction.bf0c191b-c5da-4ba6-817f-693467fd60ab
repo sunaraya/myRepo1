@@ -1,0 +1,24 @@
+{
+  "id" : "bf0c191b-c5da-4ba6-817f-693467fd60ab",
+  "names" : [ {
+    "value" : "Identify & Authorize Application",
+    "locale" : "en"
+  } ],
+  "descriptions" : [ {
+    "value" : "Default evaluate policy action for the package Evaluate policy action for the package Payment APIs for free",
+    "locale" : "English"
+  } ],
+  "templateKey" : "evaluatePolicy",
+  "parameters" : [ {
+    "templateKey" : "IdentificationRule",
+    "values" : [ "identificationType" ],
+    "parameters" : [ {
+      "templateKey" : "identificationType",
+      "values" : [ "apiKey" ]
+    } ]
+  }, {
+    "templateKey" : "logicalConnector",
+    "values" : [ "OR" ]
+  } ],
+  "active" : false
+}

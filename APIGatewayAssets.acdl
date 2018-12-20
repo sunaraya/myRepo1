@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="APIGatewayAssets" displayName="Assets for API Gateway" runtimeVersion="10.3" targetNamespace="http://namespaces.softwareag.com/webMethods/APIGateway" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <buildInfo name="BuildTimestamp" value="2018-12-20T23:07:09"/>
+    <asset name="PolicyAction.460ecc20-1719-4e2a-84e0-bb189fd7d66f" displayName="Straight Through Routing" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPListener@9999" displayName="HTTPListener@9999" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="PolicyAction.GlobalLogInvocationPolicyAction" displayName="Policy Action [Log Invocation] -&gt; Transaction logging" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Policy.878dd63e-258c-4fb0-b5ce-a9d429f58326" displayName="878dd63e-258c-4fb0-b5ce-a9d429f58326" isDeployable="true">
+        <implementation.generic type="Policy"/>
+    </asset>
+    <asset name="Policy.811f6aef-a4e6-4091-b50d-58e97794a53f" displayName="Policy For API carpark[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.1817ce6c-4915-41c3-9b77-98d7a7055822</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.6bbc91ad-3719-4cf8-9cf9-fae49c16a457</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.80df23d3-92cc-4652-a132-924cd23b2696</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.e590d89d-4ecc-4d32-8f7a-cb82fe00f431</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.eb51c99f-f973-438e-bd25-86cc92878d0a</dependsOn>
+    </asset>
+    <asset name="PolicyAction.6bbc91ad-3719-4cf8-9cf9-fae49c16a457" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API carpark[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.eb51c99f-f973-438e-bd25-86cc92878d0a" displayName="Policy Action [Throttling Traffic Optimization] -&gt; Policy For API carpark[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.e590d89d-4ecc-4d32-8f7a-cb82fe00f431" displayName="Policy Action [Identify &amp; Authorize Application] -&gt; Policy For API carpark[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.1817ce6c-4915-41c3-9b77-98d7a7055822" displayName="Policy Action [Authorize User] -&gt; Policy For API carpark[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.80df23d3-92cc-4652-a132-924cd23b2696" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API carpark[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.cache" displayName="cache" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="API.0aaf003a-ad89-4a46-bec1-dac3a63f4866" displayName="Other[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Policy.964ac981-6001-45eb-bb5e-7d11618a41d6</dependsOn>
+    </asset>
+    <asset name="Policy.964ac981-6001-45eb-bb5e-7d11618a41d6" displayName="Policy For API Other[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.dfac9739-f33d-40f8-ac72-8ad2d950142c</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.f149e547-8dae-4182-b71e-004b19066a98</dependsOn>
+    </asset>
+    <asset name="PolicyAction.f149e547-8dae-4182-b71e-004b19066a98" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API Other[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.dfac9739-f33d-40f8-ac72-8ad2d950142c" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API Other[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Alias.EurekaDefault" displayName="EurekaDefault" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="AdministratorSetting.ldapConfig" displayName="ldapConfig" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="PortalGateway.f6a809c5-e4c9-4d26-95d0-830dc742da1d" displayName="local portal" isDeployable="true">
+        <implementation.generic type="PortalGateway"/>
+        <dependsOn>APIGateway:PassmanData.f6a809c5-e4c9-4d26-95d0-830dc742da1dAPIPORTAL</dependsOn>
+        <dependsOn>APIGateway:PassmanData.f6a809c5-e4c9-4d26-95d0-830dc742da1dGATEWAY</dependsOn>
+    </asset>
+    <asset name="PassmanData.f6a809c5-e4c9-4d26-95d0-830dc742da1dGATEWAY" displayName="f6a809c5-e4c9-4d26-95d0-830dc742da1dGATEWAY" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PassmanData.f6a809c5-e4c9-4d26-95d0-830dc742da1dAPIPORTAL" displayName="f6a809c5-e4c9-4d26-95d0-830dc742da1dAPIPORTAL" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="Policy.GlobalLogInvocationPolicy" displayName="Transaction logging[Global Policy]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.GlobalLogInvocationPolicyAction</dependsOn>
+    </asset>
+    <asset name="PortalGateway.044b5179-6ca1-4292-b4fa-5151f463b143" displayName="local portal" isDeployable="true">
+        <implementation.generic type="PortalGateway"/>
+        <dependsOn>APIGateway:PassmanData.044b5179-6ca1-4292-b4fa-5151f463b143APIPORTAL</dependsOn>
+        <dependsOn>APIGateway:PassmanData.044b5179-6ca1-4292-b4fa-5151f463b143GATEWAY</dependsOn>
+    </asset>
+    <asset name="PassmanData.044b5179-6ca1-4292-b4fa-5151f463b143GATEWAY" displayName="044b5179-6ca1-4292-b4fa-5151f463b143GATEWAY" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PassmanData.044b5179-6ca1-4292-b4fa-5151f463b143APIPORTAL" displayName="044b5179-6ca1-4292-b4fa-5151f463b143APIPORTAL" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="API.197a454e-1fc7-4bd7-b64b-472b4dbc6f96" displayName="carpark[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Policy.811f6aef-a4e6-4091-b50d-58e97794a53f</dependsOn>
+    </asset>
+    <asset name="Plan.eea76314-a6e3-46ff-9ed2-a97d250c5a17" displayName="Silver" isDeployable="true">
+        <implementation.generic type="Plan"/>
+        <dependsOn>APIGateway:Policy.5ded87a4-567e-45a9-a6ad-32b126d46b1d</dependsOn>
+        <dependsOn>APIGateway:Policy.878dd63e-258c-4fb0-b5ce-a9d429f58326</dependsOn>
+    </asset>
+    <asset name="Policy.5ded87a4-567e-45a9-a6ad-32b126d46b1d" displayName="5ded87a4-567e-45a9-a6ad-32b126d46b1d" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.d5b9d0e7-3683-48fb-b1c5-3469b0c3392b</dependsOn>
+    </asset>
+    <asset name="PolicyAction.d5b9d0e7-3683-48fb-b1c5-3469b0c3392b" displayName="Policy Action [Throttling Traffic Optimization] -&gt; 5ded87a4-567e-45a9-a6ad-32b126d46b1d" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Policy.f7cd4208-e00d-4eec-a249-5c50d053d057" displayName="Policy For API calc[1]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.183c8d62-8fe1-4186-9ec7-eaf2495cc9c7</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.3789cfe0-01b6-4cde-b9aa-12b76880d3e9</dependsOn>
+    </asset>
+    <asset name="PolicyAction.3789cfe0-01b6-4cde-b9aa-12b76880d3e9" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API calc[1]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.183c8d62-8fe1-4186-9ec7-eaf2495cc9c7" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API calc[1]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPSListener@5556" displayName="HTTPSListener@5556" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="Alias.OKTA" displayName="OKTA" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="PolicyAction.bf0c191b-c5da-4ba6-817f-693467fd60ab" displayName="Policy Action [Identify &amp; Authorize Application] -&gt; Payment APIs for free" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.dfd78e7a-7817-401a-9868-f7f3bf451ce5" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API misc[1]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Policy.2bb74a01-27ba-4d4a-af71-32fec0b8c779" displayName="Policy For API misc[1]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.42e22bd0-9dbf-4fac-bbcf-f6e74c89b6f2</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.dfd78e7a-7817-401a-9868-f7f3bf451ce5</dependsOn>
+    </asset>
+    <asset name="PolicyAction.42e22bd0-9dbf-4fac-bbcf-f6e74c89b6f2" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API misc[1]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Policy.b01da3b8-4656-400e-bab5-a441d4832cd1" displayName="Payment APIs for free" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.bd78a244-fcd4-4a3f-a28f-ac1b96f61c0e</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.bf0c191b-c5da-4ba6-817f-693467fd60ab</dependsOn>
+    </asset>
+    <asset name="PolicyAction.bd78a244-fcd4-4a3f-a28f-ac1b96f61c0e" displayName="Policy Action [Throttling Traffic Optimization] -&gt; Payment APIs for free" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.13e3499b-ec58-4de3-b18a-f75a01ce0303" displayName="Policy Action [Identify &amp; Authorize Application] -&gt; Policy For API Petstore[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="API.8a3ea881-2c27-4448-ac3c-354c5bb2a937" displayName="misc[1]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Policy.2bb74a01-27ba-4d4a-af71-32fec0b8c779</dependsOn>
+    </asset>
+    <asset name="API.79ad3d7c-70fd-4e28-a422-d4786fb0aaa7" displayName="Petstore[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Policy.89178675-709a-44e6-8092-73e9967b37a1</dependsOn>
+    </asset>
+    <asset name="Policy.89178675-709a-44e6-8092-73e9967b37a1" displayName="Policy For API Petstore[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.13e3499b-ec58-4de3-b18a-f75a01ce0303</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.9b0348f0-378d-4301-98fd-2a51bf0854fc</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.a16ad514-d0fa-4e46-93db-fc55bd5857f9</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.c83ba5ae-3d7b-42d1-b5a0-6d6cb4d81636</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.fcd4d632-0dc6-4162-ad03-e12a629e0ec4</dependsOn>
+    </asset>
+    <asset name="PolicyAction.9b0348f0-378d-4301-98fd-2a51bf0854fc" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API Petstore[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.fcd4d632-0dc6-4162-ad03-e12a629e0ec4" displayName="Policy Action [Throttling Traffic Optimization] -&gt; Policy For API Petstore[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.a16ad514-d0fa-4e46-93db-fc55bd5857f9" displayName="Policy Action [Authorize User] -&gt; Policy For API Petstore[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.c83ba5ae-3d7b-42d1-b5a0-6d6cb4d81636" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API Petstore[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="API.f3c23c83-4a9b-4c45-8456-98c5be6dc9fa" displayName="calc[1]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Policy.f7cd4208-e00d-4eec-a249-5c50d053d057</dependsOn>
+    </asset>
+    <asset name="Policy.734b798c-62fb-4944-a531-4f1a87eb6e72" displayName="Quota for plan Silver" isDeployable="true">
+        <implementation.generic type="Policy"/>
+    </asset>
+    <asset name="AdministratorSetting.mobileApp" displayName="mobileApp" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="Alias.PingFederate" displayName="PingFederate" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="Alias.local" displayName="local" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="Package.26389565-b4ad-41b7-a62d-eb4fb2551925" displayName="Payment APIs for free [1.0] " isDeployable="true">
+        <implementation.generic type="Package"/>
+        <dependsOn>APIGateway:API.79ad3d7c-70fd-4e28-a422-d4786fb0aaa7</dependsOn>
+        <dependsOn>APIGateway:Plan.eea76314-a6e3-46ff-9ed2-a97d250c5a17</dependsOn>
+        <dependsOn>APIGateway:Policy.b01da3b8-4656-400e-bab5-a441d4832cd1</dependsOn>
+    </asset>
+    <asset name="Alias.ServiceConsulDefault" displayName="ServiceConsulDefault" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="PolicyAction.globalipdos" displayName="Global Denial of Service" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPListener@5555" displayName="HTTPListener@5555" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+</asset_composite>

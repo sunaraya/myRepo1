@@ -1,0 +1,13 @@
+{
+  "configId" : "ldapConfig",
+  "userName" : "Administrator",
+  "internalPorts" : { },
+  "properties" : {
+    "ldapConfig" : {
+      "ldapDirectoryList" : [ ],
+      "cacheSize" : "10",
+      "cacheTTL" : "60",
+      "provider" : "LDAP"
+    }
+  }
+}

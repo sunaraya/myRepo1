@@ -1,0 +1,15 @@
+{
+  "type" : "clientMetadataMapping",
+  "id" : "OKTA",
+  "name" : "OKTA",
+  "type" : "clientMetadataMapping",
+  "owner" : "Administrator",
+  "providerName" : "OKTA",
+  "implNames" : { },
+  "extendedValues" : { },
+  "extendedValuesV2" : [ {
+    "endpointType" : "SCOPE_UPDATE",
+    "key" : "metadataPublish",
+    "value" : "ALL_CLIENTS"
+  } ]
+}

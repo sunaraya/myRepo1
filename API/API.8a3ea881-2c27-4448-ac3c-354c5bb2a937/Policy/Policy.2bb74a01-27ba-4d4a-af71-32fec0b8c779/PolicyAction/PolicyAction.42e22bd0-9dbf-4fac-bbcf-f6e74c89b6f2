@@ -1,0 +1,17 @@
+{
+  "id" : "42e22bd0-9dbf-4fac-bbcf-f6e74c89b6f2",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "http://www.w3schools.com/xml/tempconvert.asmx" ]
+  } ],
+  "active" : false
+}

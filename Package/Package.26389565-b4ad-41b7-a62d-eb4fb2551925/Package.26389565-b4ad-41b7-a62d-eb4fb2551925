@@ -1,0 +1,11 @@
+{
+  "id" : "26389565-b4ad-41b7-a62d-eb4fb2551925",
+  "name" : "Payment APIs for free",
+  "version" : "1.0",
+  "deprecated" : false,
+  "apiIds" : [ "79ad3d7c-70fd-4e28-a422-d4786fb0aaa7" ],
+  "planIds" : [ "eea76314-a6e3-46ff-9ed2-a97d250c5a17" ],
+  "publishedPortals" : [ ],
+  "policyIds" : [ "b01da3b8-4656-400e-bab5-a441d4832cd1" ],
+  "active" : false
+}

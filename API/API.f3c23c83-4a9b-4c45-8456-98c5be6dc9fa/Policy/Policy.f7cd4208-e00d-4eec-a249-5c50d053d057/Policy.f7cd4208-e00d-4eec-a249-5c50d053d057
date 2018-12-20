@@ -1,0 +1,26 @@
+{
+  "id" : "f7cd4208-e00d-4eec-a249-5c50d053d057",
+  "names" : [ {
+    "value" : "Default Policy for API calc",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "3789cfe0-01b6-4cde-b9aa-12b76880d3e9"
+    } ],
+    "stageKey" : "transport"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "183c8d62-8fe1-4186-9ec7-eaf2495cc9c7"
+    } ],
+    "stageKey" : "routing"
+  } ],
+  "policyScope" : "SERVICE",
+  "global" : false,
+  "active" : false,
+  "systemPolicy" : false
+}

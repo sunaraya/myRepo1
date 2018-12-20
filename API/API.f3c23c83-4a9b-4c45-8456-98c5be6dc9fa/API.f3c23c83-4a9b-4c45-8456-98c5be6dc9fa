@@ -1,0 +1,256 @@
+{
+  "type" : "SOAP",
+  "apiDefinition" : {
+    "type" : "soap",
+    "wsdl" : "<wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:s=\"http://www.w3.org/2001/XMLSchema\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:tns=\"http://tempuri.org/\" xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" targetNamespace=\"http://tempuri.org/\">\n  <wsdl:types>\n    <s:schema elementFormDefault=\"qualified\" targetNamespace=\"http://tempuri.org/\">\n      <s:element name=\"Add\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intA\" type=\"s:int\"/>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intB\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"AddResponse\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"AddResult\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"Subtract\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intA\" type=\"s:int\"/>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intB\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"SubtractResponse\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"SubtractResult\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"Multiply\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intA\" type=\"s:int\"/>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intB\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"MultiplyResponse\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"MultiplyResult\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"Divide\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intA\" type=\"s:int\"/>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intB\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"DivideResponse\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"DivideResult\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n    </s:schema>\n  </wsdl:types>\n  <wsdl:message name=\"AddSoapIn\">\n    <wsdl:part name=\"parameters\" element=\"tns:Add\"/>\n  </wsdl:message>\n  <wsdl:message name=\"AddSoapOut\">\n    <wsdl:part name=\"parameters\" element=\"tns:AddResponse\"/>\n  </wsdl:message>\n  <wsdl:message name=\"SubtractSoapIn\">\n    <wsdl:part name=\"parameters\" element=\"tns:Subtract\"/>\n  </wsdl:message>\n  <wsdl:message name=\"SubtractSoapOut\">\n    <wsdl:part name=\"parameters\" element=\"tns:SubtractResponse\"/>\n  </wsdl:message>\n  <wsdl:message name=\"MultiplySoapIn\">\n    <wsdl:part name=\"parameters\" element=\"tns:Multiply\"/>\n  </wsdl:message>\n  <wsdl:message name=\"MultiplySoapOut\">\n    <wsdl:part name=\"parameters\" element=\"tns:MultiplyResponse\"/>\n  </wsdl:message>\n  <wsdl:message name=\"DivideSoapIn\">\n    <wsdl:part name=\"parameters\" element=\"tns:Divide\"/>\n  </wsdl:message>\n  <wsdl:message name=\"DivideSoapOut\">\n    <wsdl:part name=\"parameters\" element=\"tns:DivideResponse\"/>\n  </wsdl:message>\n  <wsdl:portType name=\"CalculatorSoap\">\n    <wsdl:operation name=\"Add\">\n      <wsdl:documentation>Adds two integers. This is a test WebService. ©DNE Online</wsdl:documentation>\n      <wsdl:input message=\"tns:AddSoapIn\"/>\n      <wsdl:output message=\"tns:AddSoapOut\"/>\n    </wsdl:operation>\n    <wsdl:operation name=\"Subtract\">\n      <wsdl:input message=\"tns:SubtractSoapIn\"/>\n      <wsdl:output message=\"tns:SubtractSoapOut\"/>\n    </wsdl:operation>\n    <wsdl:operation name=\"Multiply\">\n      <wsdl:input message=\"tns:MultiplySoapIn\"/>\n      <wsdl:output message=\"tns:MultiplySoapOut\"/>\n    </wsdl:operation>\n    <wsdl:operation name=\"Divide\">\n      <wsdl:input message=\"tns:DivideSoapIn\"/>\n      <wsdl:output message=\"tns:DivideSoapOut\"/>\n    </wsdl:operation>\n  </wsdl:portType>\n  <wsdl:binding name=\"CalculatorSoap\" type=\"tns:CalculatorSoap\">\n    <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n    <wsdl:operation name=\"Add\">\n      <soap:operation soapAction=\"http://tempuri.org/Add\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"Subtract\">\n      <soap:operation soapAction=\"http://tempuri.org/Subtract\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"Multiply\">\n      <soap:operation soapAction=\"http://tempuri.org/Multiply\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"Divide\">\n      <soap:operation soapAction=\"http://tempuri.org/Divide\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n  </wsdl:binding>\n  <wsdl:binding name=\"CalculatorSoap12\" type=\"tns:CalculatorSoap\">\n    <soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n    <wsdl:operation name=\"Add\">\n      <soap12:operation soapAction=\"http://tempuri.org/Add\" style=\"document\"/>\n      <wsdl:input>\n        <soap12:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap12:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"Subtract\">\n      <soap12:operation soapAction=\"http://tempuri.org/Subtract\" style=\"document\"/>\n      <wsdl:input>\n        <soap12:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap12:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"Multiply\">\n      <soap12:operation soapAction=\"http://tempuri.org/Multiply\" style=\"document\"/>\n      <wsdl:input>\n        <soap12:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap12:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"Divide\">\n      <soap12:operation soapAction=\"http://tempuri.org/Divide\" style=\"document\"/>\n      <wsdl:input>\n        <soap12:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap12:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n  </wsdl:binding>\n  <wsdl:service name=\"Calculator\">\n    <wsdl:port name=\"CalculatorSoap\" binding=\"tns:CalculatorSoap\">\n      <soap:address location=\"http://www.dneonline.com/calculator.asmx\"/>\n    </wsdl:port>\n    <wsdl:port name=\"CalculatorSoap12\" binding=\"tns:CalculatorSoap12\">\n      <soap12:address location=\"http://www.dneonline.com/calculator.asmx\"/>\n    </wsdl:port>\n  </wsdl:service>\n</wsdl:definitions>",
+    "baseWsdlUri" : "C:\\SoftwareAG10_3\\IntegrationServer\\instances\\default\\temp\\1543463554169\\",
+    "nativeUri" : [ "http://www.dneonline.com/calculator.asmx" ],
+    "serviceName" : "Calculator",
+    "operationsInfo" : [ {
+      "name" : "Subtract",
+      "namespace" : "http://tempuri.org/",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "CalculatorSoap12",
+        "type" : "soap12",
+        "specifier" : "",
+        "inputMessage" : "<tem:Subtract xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Subtract>",
+        "outputMessage" : "<tem:SubtractResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:SubtractResult>3</tem:SubtractResult>\r\n</tem:SubtractResponse>"
+      }, {
+        "name" : "CalculatorSoap",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<tem:Subtract xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Subtract>",
+        "outputMessage" : "<tem:SubtractResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:SubtractResult>3</tem:SubtractResult>\r\n</tem:SubtractResponse>"
+      } ],
+      "defined" : true,
+      "soapAction" : "http://tempuri.org/Subtract",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "example" : "<tem:SubtractResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:SubtractResult>3</tem:SubtractResult>\r\n</tem:SubtractResponse>"
+                },
+                "application/json" : {
+                  "example" : "{\"SubtractResponse\":{\"SubtractResult\":3}}"
+                }
+              }
+            }
+          },
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "example" : "<tem:Subtract xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Subtract>"
+              },
+              "application/json" : {
+                "example" : "{\"Subtract\":{\"intA\":3,\"intB\":3}}"
+              }
+            },
+            "required" : false
+          }
+        },
+        "enabled" : true,
+        "name" : "Subtract",
+        "invokePath" : "/Subtract"
+      }
+    }, {
+      "name" : "Multiply",
+      "namespace" : "http://tempuri.org/",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "CalculatorSoap12",
+        "type" : "soap12",
+        "specifier" : "",
+        "inputMessage" : "<tem:Multiply xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Multiply>",
+        "outputMessage" : "<tem:MultiplyResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:MultiplyResult>3</tem:MultiplyResult>\r\n</tem:MultiplyResponse>"
+      }, {
+        "name" : "CalculatorSoap",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<tem:Multiply xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Multiply>",
+        "outputMessage" : "<tem:MultiplyResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:MultiplyResult>3</tem:MultiplyResult>\r\n</tem:MultiplyResponse>"
+      } ],
+      "defined" : true,
+      "soapAction" : "http://tempuri.org/Multiply",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "example" : "<tem:MultiplyResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:MultiplyResult>3</tem:MultiplyResult>\r\n</tem:MultiplyResponse>"
+                },
+                "application/json" : {
+                  "example" : "{\"MultiplyResponse\":{\"MultiplyResult\":3}}"
+                }
+              }
+            }
+          },
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "example" : "<tem:Multiply xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Multiply>"
+              },
+              "application/json" : {
+                "example" : "{\"Multiply\":{\"intA\":3,\"intB\":3}}"
+              }
+            },
+            "required" : false
+          }
+        },
+        "enabled" : true,
+        "name" : "Multiply",
+        "invokePath" : "/Multiply"
+      }
+    }, {
+      "name" : "Add",
+      "namespace" : "http://tempuri.org/",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "CalculatorSoap12",
+        "type" : "soap12",
+        "specifier" : "",
+        "inputMessage" : "<tem:Add xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Add>",
+        "outputMessage" : "<tem:AddResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:AddResult>3</tem:AddResult>\r\n</tem:AddResponse>"
+      }, {
+        "name" : "CalculatorSoap",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<tem:Add xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Add>",
+        "outputMessage" : "<tem:AddResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:AddResult>3</tem:AddResult>\r\n</tem:AddResponse>"
+      } ],
+      "defined" : true,
+      "soapAction" : "http://tempuri.org/Add",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "example" : "<tem:AddResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:AddResult>3</tem:AddResult>\r\n</tem:AddResponse>"
+                },
+                "application/json" : {
+                  "example" : "{\"AddResponse\":{\"AddResult\":3}}"
+                }
+              }
+            }
+          },
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "example" : "<tem:Add xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Add>"
+              },
+              "application/json" : {
+                "example" : "{\"Add\":{\"intA\":3,\"intB\":3}}"
+              }
+            },
+            "required" : false
+          }
+        },
+        "enabled" : true,
+        "name" : "Add",
+        "invokePath" : "/Add"
+      }
+    }, {
+      "name" : "Divide",
+      "namespace" : "http://tempuri.org/",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "CalculatorSoap12",
+        "type" : "soap12",
+        "specifier" : "",
+        "inputMessage" : "<tem:Divide xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Divide>",
+        "outputMessage" : "<tem:DivideResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:DivideResult>3</tem:DivideResult>\r\n</tem:DivideResponse>"
+      }, {
+        "name" : "CalculatorSoap",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<tem:Divide xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Divide>",
+        "outputMessage" : "<tem:DivideResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:DivideResult>3</tem:DivideResult>\r\n</tem:DivideResponse>"
+      } ],
+      "defined" : true,
+      "soapAction" : "http://tempuri.org/Divide",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "example" : "<tem:DivideResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:DivideResult>3</tem:DivideResult>\r\n</tem:DivideResponse>"
+                },
+                "application/json" : {
+                  "example" : "{\"DivideResponse\":{\"DivideResult\":3}}"
+                }
+              }
+            }
+          },
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "example" : "<tem:Divide xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Divide>"
+              },
+              "application/json" : {
+                "example" : "{\"Divide\":{\"intA\":3,\"intB\":3}}"
+              }
+            },
+            "required" : false
+          }
+        },
+        "enabled" : true,
+        "name" : "Divide",
+        "invokePath" : "/Divide"
+      }
+    } ],
+    "type" : "soap",
+    "operationPolicies" : {
+      "Add" : "",
+      "Divide" : "",
+      "Multiply" : "",
+      "Subtract" : ""
+    },
+    "isRESTInvokeEnabled" : false
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://www.dneonline.com/calculator.asmx",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "calc",
+  "apiVersion" : "1",
+  "maturityState" : "Beta",
+  "isActive" : false,
+  "type" : "SOAP",
+  "owner" : "Administrator",
+  "policies" : [ "f7cd4208-e00d-4eec-a249-5c50d053d057" ],
+  "referencedFiles" : {
+    "calc.wsdl" : "<wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:s=\"http://www.w3.org/2001/XMLSchema\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:tns=\"http://tempuri.org/\" xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" targetNamespace=\"http://tempuri.org/\">\n  <wsdl:types>\n    <s:schema elementFormDefault=\"qualified\" targetNamespace=\"http://tempuri.org/\">\n      <s:element name=\"Add\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intA\" type=\"s:int\"/>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intB\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"AddResponse\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"AddResult\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"Subtract\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intA\" type=\"s:int\"/>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intB\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"SubtractResponse\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"SubtractResult\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"Multiply\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intA\" type=\"s:int\"/>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intB\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"MultiplyResponse\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"MultiplyResult\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"Divide\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intA\" type=\"s:int\"/>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"intB\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"DivideResponse\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"DivideResult\" type=\"s:int\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n    </s:schema>\n  </wsdl:types>\n  <wsdl:message name=\"AddSoapIn\">\n    <wsdl:part name=\"parameters\" element=\"tns:Add\"/>\n  </wsdl:message>\n  <wsdl:message name=\"AddSoapOut\">\n    <wsdl:part name=\"parameters\" element=\"tns:AddResponse\"/>\n  </wsdl:message>\n  <wsdl:message name=\"SubtractSoapIn\">\n    <wsdl:part name=\"parameters\" element=\"tns:Subtract\"/>\n  </wsdl:message>\n  <wsdl:message name=\"SubtractSoapOut\">\n    <wsdl:part name=\"parameters\" element=\"tns:SubtractResponse\"/>\n  </wsdl:message>\n  <wsdl:message name=\"MultiplySoapIn\">\n    <wsdl:part name=\"parameters\" element=\"tns:Multiply\"/>\n  </wsdl:message>\n  <wsdl:message name=\"MultiplySoapOut\">\n    <wsdl:part name=\"parameters\" element=\"tns:MultiplyResponse\"/>\n  </wsdl:message>\n  <wsdl:message name=\"DivideSoapIn\">\n    <wsdl:part name=\"parameters\" element=\"tns:Divide\"/>\n  </wsdl:message>\n  <wsdl:message name=\"DivideSoapOut\">\n    <wsdl:part name=\"parameters\" element=\"tns:DivideResponse\"/>\n  </wsdl:message>\n  <wsdl:portType name=\"CalculatorSoap\">\n    <wsdl:operation name=\"Add\">\n      <wsdl:documentation>Adds two integers. This is a test WebService. ©DNE Online</wsdl:documentation>\n      <wsdl:input message=\"tns:AddSoapIn\"/>\n      <wsdl:output message=\"tns:AddSoapOut\"/>\n    </wsdl:operation>\n    <wsdl:operation name=\"Subtract\">\n      <wsdl:input message=\"tns:SubtractSoapIn\"/>\n      <wsdl:output message=\"tns:SubtractSoapOut\"/>\n    </wsdl:operation>\n    <wsdl:operation name=\"Multiply\">\n      <wsdl:input message=\"tns:MultiplySoapIn\"/>\n      <wsdl:output message=\"tns:MultiplySoapOut\"/>\n    </wsdl:operation>\n    <wsdl:operation name=\"Divide\">\n      <wsdl:input message=\"tns:DivideSoapIn\"/>\n      <wsdl:output message=\"tns:DivideSoapOut\"/>\n    </wsdl:operation>\n  </wsdl:portType>\n  <wsdl:binding name=\"CalculatorSoap\" type=\"tns:CalculatorSoap\">\n    <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n    <wsdl:operation name=\"Add\">\n      <soap:operation soapAction=\"http://tempuri.org/Add\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"Subtract\">\n      <soap:operation soapAction=\"http://tempuri.org/Subtract\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"Multiply\">\n      <soap:operation soapAction=\"http://tempuri.org/Multiply\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"Divide\">\n      <soap:operation soapAction=\"http://tempuri.org/Divide\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n  </wsdl:binding>\n  <wsdl:binding name=\"CalculatorSoap12\" type=\"tns:CalculatorSoap\">\n    <soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n    <wsdl:operation name=\"Add\">\n      <soap12:operation soapAction=\"http://tempuri.org/Add\" style=\"document\"/>\n      <wsdl:input>\n        <soap12:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap12:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"Subtract\">\n      <soap12:operation soapAction=\"http://tempuri.org/Subtract\" style=\"document\"/>\n      <wsdl:input>\n        <soap12:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap12:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"Multiply\">\n      <soap12:operation soapAction=\"http://tempuri.org/Multiply\" style=\"document\"/>\n      <wsdl:input>\n        <soap12:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap12:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"Divide\">\n      <soap12:operation soapAction=\"http://tempuri.org/Divide\" style=\"document\"/>\n      <wsdl:input>\n        <soap12:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap12:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n  </wsdl:binding>\n  <wsdl:service name=\"Calculator\">\n    <wsdl:port name=\"CalculatorSoap\" binding=\"tns:CalculatorSoap\">\n      <soap:address location=\"http://www.dneonline.com/calculator.asmx\"/>\n    </wsdl:port>\n    <wsdl:port name=\"CalculatorSoap12\" binding=\"tns:CalculatorSoap12\">\n      <soap12:address location=\"http://www.dneonline.com/calculator.asmx\"/>\n    </wsdl:port>\n  </wsdl:service>\n</wsdl:definitions>"
+  },
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2018-11-22 07:45:25 GMT",
+  "systemVersion" : 1,
+  "id" : "f3c23c83-4a9b-4c45-8456-98c5be6dc9fa"
+}

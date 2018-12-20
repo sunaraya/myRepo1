@@ -1,0 +1,18 @@
+{
+  "id" : "044b5179-6ca1-4292-b4fa-5151f463b143",
+  "gatewayName" : "local portal",
+  "gatewayUsername" : "Administrator",
+  "gatewayPassword" : "********************************",
+  "gatewayURL" : "http://mcnagaraja02.eur.ad.sag:5555",
+  "refId" : "abb92720-d80e-11e8-35ab-d481d78694bb",
+  "externalPortal" : {
+    "type" : "apiportal",
+    "endpointTenant" : "default",
+    "endpointURL" : "http://mcnagaraja02.eur.ad.sag:18101",
+    "endpointUsername" : "System",
+    "endpointPassword" : "********************************",
+    "type" : "apiportal"
+  },
+  "version" : "1",
+  "published" : true
+}
