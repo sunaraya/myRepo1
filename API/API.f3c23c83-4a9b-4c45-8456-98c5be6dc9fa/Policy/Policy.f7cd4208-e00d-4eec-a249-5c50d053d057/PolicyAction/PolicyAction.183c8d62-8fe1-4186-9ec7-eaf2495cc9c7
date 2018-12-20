@@ -1,0 +1,17 @@
+{
+  "id" : "183c8d62-8fe1-4186-9ec7-eaf2495cc9c7",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "http://www.dneonline.com/calculator.asmx" ]
+  } ],
+  "active" : false
+}

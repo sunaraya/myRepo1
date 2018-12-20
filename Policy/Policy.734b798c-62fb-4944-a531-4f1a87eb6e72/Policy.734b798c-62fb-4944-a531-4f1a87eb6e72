@@ -1,0 +1,16 @@
+{
+  "id" : "734b798c-62fb-4944-a531-4f1a87eb6e72",
+  "names" : [ {
+    "value" : "Quota for plan Silver",
+    "locale" : "en"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "en"
+  } ],
+  "policyEnforcements" : [ ],
+  "policyScope" : "PACKAGE",
+  "global" : false,
+  "active" : false,
+  "systemPolicy" : false
+}

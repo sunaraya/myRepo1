@@ -1,0 +1,19 @@
+{
+  "id" : "f149e547-8dae-4182-b71e-004b19066a98",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "null/nemsdsvc/OtherPublishedReports" ]
+  }, {
+    "templateKey" : "soapOptimize",
+    "values" : [ "None" ]
+  }, {
+    "templateKey" : "passSecurityHeaders",
+    "values" : [ "false" ]
+  } ],
+  "active" : false
+}

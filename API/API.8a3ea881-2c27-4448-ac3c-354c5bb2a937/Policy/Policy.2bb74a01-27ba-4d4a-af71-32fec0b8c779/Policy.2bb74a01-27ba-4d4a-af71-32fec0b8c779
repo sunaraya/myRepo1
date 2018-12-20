@@ -1,0 +1,26 @@
+{
+  "id" : "2bb74a01-27ba-4d4a-af71-32fec0b8c779",
+  "names" : [ {
+    "value" : "Default Policy for API misc",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "dfd78e7a-7817-401a-9868-f7f3bf451ce5"
+    } ],
+    "stageKey" : "transport"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "42e22bd0-9dbf-4fac-bbcf-f6e74c89b6f2"
+    } ],
+    "stageKey" : "routing"
+  } ],
+  "policyScope" : "SERVICE",
+  "global" : false,
+  "active" : false,
+  "systemPolicy" : false
+}

@@ -1,0 +1,146 @@
+{
+  "type" : "SOAP",
+  "apiDefinition" : {
+    "type" : "soap",
+    "wsdl" : "<wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:s=\"http://www.w3.org/2001/XMLSchema\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:tns=\"https://www.w3schools.com/xml/\" xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" targetNamespace=\"https://www.w3schools.com/xml/\">\n  <wsdl:types>\n    <s:schema elementFormDefault=\"qualified\" targetNamespace=\"https://www.w3schools.com/xml/\">\n      <s:element name=\"FahrenheitToCelsius\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Fahrenheit\" type=\"s:string\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"FahrenheitToCelsiusResponse\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"FahrenheitToCelsiusResult\" type=\"s:string\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"CelsiusToFahrenheit\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Celsius\" type=\"s:string\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"CelsiusToFahrenheitResponse\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"CelsiusToFahrenheitResult\" type=\"s:string\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"string\" nillable=\"true\" type=\"s:string\"/>\n    </s:schema>\n  </wsdl:types>\n  <wsdl:message name=\"FahrenheitToCelsiusSoapIn\">\n    <wsdl:part name=\"parameters\" element=\"tns:FahrenheitToCelsius\"/>\n  </wsdl:message>\n  <wsdl:message name=\"FahrenheitToCelsiusSoapOut\">\n    <wsdl:part name=\"parameters\" element=\"tns:FahrenheitToCelsiusResponse\"/>\n  </wsdl:message>\n  <wsdl:message name=\"CelsiusToFahrenheitSoapIn\">\n    <wsdl:part name=\"parameters\" element=\"tns:CelsiusToFahrenheit\"/>\n  </wsdl:message>\n  <wsdl:message name=\"CelsiusToFahrenheitSoapOut\">\n    <wsdl:part name=\"parameters\" element=\"tns:CelsiusToFahrenheitResponse\"/>\n  </wsdl:message>\n  <wsdl:message name=\"FahrenheitToCelsiusHttpPostIn\">\n    <wsdl:part name=\"Fahrenheit\" type=\"s:string\"/>\n  </wsdl:message>\n  <wsdl:message name=\"FahrenheitToCelsiusHttpPostOut\">\n    <wsdl:part name=\"Body\" element=\"tns:string\"/>\n  </wsdl:message>\n  <wsdl:message name=\"CelsiusToFahrenheitHttpPostIn\">\n    <wsdl:part name=\"Celsius\" type=\"s:string\"/>\n  </wsdl:message>\n  <wsdl:message name=\"CelsiusToFahrenheitHttpPostOut\">\n    <wsdl:part name=\"Body\" element=\"tns:string\"/>\n  </wsdl:message>\n  <wsdl:portType name=\"TempConvertSoap\">\n    <wsdl:operation name=\"FahrenheitToCelsius\">\n      <wsdl:input message=\"tns:FahrenheitToCelsiusSoapIn\"/>\n      <wsdl:output message=\"tns:FahrenheitToCelsiusSoapOut\"/>\n    </wsdl:operation>\n    <wsdl:operation name=\"CelsiusToFahrenheit\">\n      <wsdl:input message=\"tns:CelsiusToFahrenheitSoapIn\"/>\n      <wsdl:output message=\"tns:CelsiusToFahrenheitSoapOut\"/>\n    </wsdl:operation>\n  </wsdl:portType>\n  <wsdl:portType name=\"TempConvertHttpPost\">\n    <wsdl:operation name=\"FahrenheitToCelsius\">\n      <wsdl:input message=\"tns:FahrenheitToCelsiusHttpPostIn\"/>\n      <wsdl:output message=\"tns:FahrenheitToCelsiusHttpPostOut\"/>\n    </wsdl:operation>\n    <wsdl:operation name=\"CelsiusToFahrenheit\">\n      <wsdl:input message=\"tns:CelsiusToFahrenheitHttpPostIn\"/>\n      <wsdl:output message=\"tns:CelsiusToFahrenheitHttpPostOut\"/>\n    </wsdl:operation>\n  </wsdl:portType>\n  <wsdl:binding name=\"TempConvertSoap\" type=\"tns:TempConvertSoap\">\n    <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n    <wsdl:operation name=\"FahrenheitToCelsius\">\n      <soap:operation soapAction=\"https://www.w3schools.com/xml/FahrenheitToCelsius\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"CelsiusToFahrenheit\">\n      <soap:operation soapAction=\"https://www.w3schools.com/xml/CelsiusToFahrenheit\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n  </wsdl:binding>\n  <wsdl:binding name=\"TempConvertSoap12\" type=\"tns:TempConvertSoap\">\n    <soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n    <wsdl:operation name=\"FahrenheitToCelsius\">\n      <soap12:operation soapAction=\"https://www.w3schools.com/xml/FahrenheitToCelsius\" style=\"document\"/>\n      <wsdl:input>\n        <soap12:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap12:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"CelsiusToFahrenheit\">\n      <soap12:operation soapAction=\"https://www.w3schools.com/xml/CelsiusToFahrenheit\" style=\"document\"/>\n      <wsdl:input>\n        <soap12:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap12:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n  </wsdl:binding>\n  <wsdl:binding name=\"TempConvertHttpPost\" type=\"tns:TempConvertHttpPost\">\n    <http:binding verb=\"POST\"/>\n    <wsdl:operation name=\"FahrenheitToCelsius\">\n      <http:operation location=\"/FahrenheitToCelsius\"/>\n      <wsdl:input>\n        <mime:content type=\"application/x-www-form-urlencoded\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <mime:mimeXml part=\"Body\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"CelsiusToFahrenheit\">\n      <http:operation location=\"/CelsiusToFahrenheit\"/>\n      <wsdl:input>\n        <mime:content type=\"application/x-www-form-urlencoded\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <mime:mimeXml part=\"Body\"/>\n      </wsdl:output>\n    </wsdl:operation>\n  </wsdl:binding>\n  <wsdl:service name=\"TempConvert\">\n    <wsdl:port name=\"TempConvertSoap\" binding=\"tns:TempConvertSoap\">\n      <soap:address location=\"http://www.w3schools.com/xml/tempconvert.asmx\"/>\n    </wsdl:port>\n    <wsdl:port name=\"TempConvertSoap12\" binding=\"tns:TempConvertSoap12\">\n      <soap12:address location=\"http://www.w3schools.com/xml/tempconvert.asmx\"/>\n    </wsdl:port>\n    <wsdl:port name=\"TempConvertHttpPost\" binding=\"tns:TempConvertHttpPost\">\n      <http:address location=\"http://www.w3schools.com/xml/tempconvert.asmx\"/>\n    </wsdl:port>\n  </wsdl:service>\n</wsdl:definitions>",
+    "baseWsdlUri" : "C:\\SoftwareAG10_3\\IntegrationServer\\instances\\default\\temp\\1545318383841\\",
+    "nativeUri" : [ "http://www.w3schools.com/xml/tempconvert.asmx" ],
+    "serviceName" : "TempConvert",
+    "operationsInfo" : [ {
+      "name" : "CelsiusToFahrenheit",
+      "namespace" : "https://www.w3schools.com/xml/",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "TempConvertSoap",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<x/:CelsiusToFahrenheit xmlns:x/=\"https://www.w3schools.com/xml/\">\r\n  <!--Optional:-->\r\n  <x/:Celsius>string</x/:Celsius>\r\n</x/:CelsiusToFahrenheit>",
+        "outputMessage" : "<x/:CelsiusToFahrenheitResponse xmlns:x/=\"https://www.w3schools.com/xml/\">\r\n  <!--Optional:-->\r\n  <x/:CelsiusToFahrenheitResult>string</x/:CelsiusToFahrenheitResult>\r\n</x/:CelsiusToFahrenheitResponse>"
+      }, {
+        "name" : "TempConvertSoap12",
+        "type" : "soap12",
+        "specifier" : "",
+        "inputMessage" : "<x/:CelsiusToFahrenheit xmlns:x/=\"https://www.w3schools.com/xml/\">\r\n  <!--Optional:-->\r\n  <x/:Celsius>string</x/:Celsius>\r\n</x/:CelsiusToFahrenheit>",
+        "outputMessage" : "<x/:CelsiusToFahrenheitResponse xmlns:x/=\"https://www.w3schools.com/xml/\">\r\n  <!--Optional:-->\r\n  <x/:CelsiusToFahrenheitResult>string</x/:CelsiusToFahrenheitResult>\r\n</x/:CelsiusToFahrenheitResponse>"
+      }, {
+        "name" : "TempConvertHttpPost",
+        "type" : "http",
+        "specifier" : "POST",
+        "inputMessage" : "<Celsius></Celsius>\n",
+        "outputMessage" : "<x/:string xmlns:x/=\"https://www.w3schools.com/xml/\">string</x/:string>"
+      } ],
+      "defined" : true,
+      "soapAction" : "https://www.w3schools.com/xml/CelsiusToFahrenheit",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "example" : "<x/:CelsiusToFahrenheitResponse xmlns:x/=\"https://www.w3schools.com/xml/\">\r\n  <!--Optional:-->\r\n  <x/:CelsiusToFahrenheitResult>string</x/:CelsiusToFahrenheitResult>\r\n</x/:CelsiusToFahrenheitResponse>"
+                }
+              }
+            }
+          },
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "example" : "<x/:CelsiusToFahrenheit xmlns:x/=\"https://www.w3schools.com/xml/\">\r\n  <!--Optional:-->\r\n  <x/:Celsius>string</x/:Celsius>\r\n</x/:CelsiusToFahrenheit>"
+              }
+            },
+            "required" : false
+          }
+        },
+        "enabled" : true,
+        "name" : "CelsiusToFahrenheit",
+        "invokePath" : "/CelsiusToFahrenheit"
+      }
+    }, {
+      "name" : "FahrenheitToCelsius",
+      "namespace" : "https://www.w3schools.com/xml/",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "TempConvertSoap",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<x/:FahrenheitToCelsius xmlns:x/=\"https://www.w3schools.com/xml/\">\r\n  <!--Optional:-->\r\n  <x/:Fahrenheit>string</x/:Fahrenheit>\r\n</x/:FahrenheitToCelsius>",
+        "outputMessage" : "<x/:FahrenheitToCelsiusResponse xmlns:x/=\"https://www.w3schools.com/xml/\">\r\n  <!--Optional:-->\r\n  <x/:FahrenheitToCelsiusResult>string</x/:FahrenheitToCelsiusResult>\r\n</x/:FahrenheitToCelsiusResponse>"
+      }, {
+        "name" : "TempConvertSoap12",
+        "type" : "soap12",
+        "specifier" : "",
+        "inputMessage" : "<x/:FahrenheitToCelsius xmlns:x/=\"https://www.w3schools.com/xml/\">\r\n  <!--Optional:-->\r\n  <x/:Fahrenheit>string</x/:Fahrenheit>\r\n</x/:FahrenheitToCelsius>",
+        "outputMessage" : "<x/:FahrenheitToCelsiusResponse xmlns:x/=\"https://www.w3schools.com/xml/\">\r\n  <!--Optional:-->\r\n  <x/:FahrenheitToCelsiusResult>string</x/:FahrenheitToCelsiusResult>\r\n</x/:FahrenheitToCelsiusResponse>"
+      }, {
+        "name" : "TempConvertHttpPost",
+        "type" : "http",
+        "specifier" : "POST",
+        "inputMessage" : "<Fahrenheit></Fahrenheit>\n",
+        "outputMessage" : "<x/:string xmlns:x/=\"https://www.w3schools.com/xml/\">string</x/:string>"
+      } ],
+      "defined" : true,
+      "soapAction" : "https://www.w3schools.com/xml/FahrenheitToCelsius",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "example" : "<x/:FahrenheitToCelsiusResponse xmlns:x/=\"https://www.w3schools.com/xml/\">\r\n  <!--Optional:-->\r\n  <x/:FahrenheitToCelsiusResult>string</x/:FahrenheitToCelsiusResult>\r\n</x/:FahrenheitToCelsiusResponse>"
+                }
+              }
+            }
+          },
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "example" : "<x/:FahrenheitToCelsius xmlns:x/=\"https://www.w3schools.com/xml/\">\r\n  <!--Optional:-->\r\n  <x/:Fahrenheit>string</x/:Fahrenheit>\r\n</x/:FahrenheitToCelsius>"
+              }
+            },
+            "required" : false
+          }
+        },
+        "enabled" : true,
+        "name" : "FahrenheitToCelsius",
+        "invokePath" : "/FahrenheitToCelsius"
+      }
+    } ],
+    "type" : "soap",
+    "operationPolicies" : {
+      "CelsiusToFahrenheit" : "",
+      "FahrenheitToCelsius" : ""
+    },
+    "isRESTInvokeEnabled" : false
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://www.w3schools.com/xml/tempconvert.asmx",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "misc",
+  "apiVersion" : "1",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "SOAP",
+  "owner" : "Administrator",
+  "policies" : [ "2bb74a01-27ba-4d4a-af71-32fec0b8c779" ],
+  "referencedFiles" : {
+    "misc.wsdl" : "<wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:s=\"http://www.w3.org/2001/XMLSchema\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:tns=\"https://www.w3schools.com/xml/\" xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" targetNamespace=\"https://www.w3schools.com/xml/\">\n  <wsdl:types>\n    <s:schema elementFormDefault=\"qualified\" targetNamespace=\"https://www.w3schools.com/xml/\">\n      <s:element name=\"FahrenheitToCelsius\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Fahrenheit\" type=\"s:string\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"FahrenheitToCelsiusResponse\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"FahrenheitToCelsiusResult\" type=\"s:string\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"CelsiusToFahrenheit\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Celsius\" type=\"s:string\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"CelsiusToFahrenheitResponse\">\n        <s:complexType>\n          <s:sequence>\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"CelsiusToFahrenheitResult\" type=\"s:string\"/>\n          </s:sequence>\n        </s:complexType>\n      </s:element>\n      <s:element name=\"string\" nillable=\"true\" type=\"s:string\"/>\n    </s:schema>\n  </wsdl:types>\n  <wsdl:message name=\"FahrenheitToCelsiusSoapIn\">\n    <wsdl:part name=\"parameters\" element=\"tns:FahrenheitToCelsius\"/>\n  </wsdl:message>\n  <wsdl:message name=\"FahrenheitToCelsiusSoapOut\">\n    <wsdl:part name=\"parameters\" element=\"tns:FahrenheitToCelsiusResponse\"/>\n  </wsdl:message>\n  <wsdl:message name=\"CelsiusToFahrenheitSoapIn\">\n    <wsdl:part name=\"parameters\" element=\"tns:CelsiusToFahrenheit\"/>\n  </wsdl:message>\n  <wsdl:message name=\"CelsiusToFahrenheitSoapOut\">\n    <wsdl:part name=\"parameters\" element=\"tns:CelsiusToFahrenheitResponse\"/>\n  </wsdl:message>\n  <wsdl:message name=\"FahrenheitToCelsiusHttpPostIn\">\n    <wsdl:part name=\"Fahrenheit\" type=\"s:string\"/>\n  </wsdl:message>\n  <wsdl:message name=\"FahrenheitToCelsiusHttpPostOut\">\n    <wsdl:part name=\"Body\" element=\"tns:string\"/>\n  </wsdl:message>\n  <wsdl:message name=\"CelsiusToFahrenheitHttpPostIn\">\n    <wsdl:part name=\"Celsius\" type=\"s:string\"/>\n  </wsdl:message>\n  <wsdl:message name=\"CelsiusToFahrenheitHttpPostOut\">\n    <wsdl:part name=\"Body\" element=\"tns:string\"/>\n  </wsdl:message>\n  <wsdl:portType name=\"TempConvertSoap\">\n    <wsdl:operation name=\"FahrenheitToCelsius\">\n      <wsdl:input message=\"tns:FahrenheitToCelsiusSoapIn\"/>\n      <wsdl:output message=\"tns:FahrenheitToCelsiusSoapOut\"/>\n    </wsdl:operation>\n    <wsdl:operation name=\"CelsiusToFahrenheit\">\n      <wsdl:input message=\"tns:CelsiusToFahrenheitSoapIn\"/>\n      <wsdl:output message=\"tns:CelsiusToFahrenheitSoapOut\"/>\n    </wsdl:operation>\n  </wsdl:portType>\n  <wsdl:portType name=\"TempConvertHttpPost\">\n    <wsdl:operation name=\"FahrenheitToCelsius\">\n      <wsdl:input message=\"tns:FahrenheitToCelsiusHttpPostIn\"/>\n      <wsdl:output message=\"tns:FahrenheitToCelsiusHttpPostOut\"/>\n    </wsdl:operation>\n    <wsdl:operation name=\"CelsiusToFahrenheit\">\n      <wsdl:input message=\"tns:CelsiusToFahrenheitHttpPostIn\"/>\n      <wsdl:output message=\"tns:CelsiusToFahrenheitHttpPostOut\"/>\n    </wsdl:operation>\n  </wsdl:portType>\n  <wsdl:binding name=\"TempConvertSoap\" type=\"tns:TempConvertSoap\">\n    <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n    <wsdl:operation name=\"FahrenheitToCelsius\">\n      <soap:operation soapAction=\"https://www.w3schools.com/xml/FahrenheitToCelsius\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"CelsiusToFahrenheit\">\n      <soap:operation soapAction=\"https://www.w3schools.com/xml/CelsiusToFahrenheit\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n  </wsdl:binding>\n  <wsdl:binding name=\"TempConvertSoap12\" type=\"tns:TempConvertSoap\">\n    <soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n    <wsdl:operation name=\"FahrenheitToCelsius\">\n      <soap12:operation soapAction=\"https://www.w3schools.com/xml/FahrenheitToCelsius\" style=\"document\"/>\n      <wsdl:input>\n        <soap12:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap12:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"CelsiusToFahrenheit\">\n      <soap12:operation soapAction=\"https://www.w3schools.com/xml/CelsiusToFahrenheit\" style=\"document\"/>\n      <wsdl:input>\n        <soap12:body use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap12:body use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n  </wsdl:binding>\n  <wsdl:binding name=\"TempConvertHttpPost\" type=\"tns:TempConvertHttpPost\">\n    <http:binding verb=\"POST\"/>\n    <wsdl:operation name=\"FahrenheitToCelsius\">\n      <http:operation location=\"/FahrenheitToCelsius\"/>\n      <wsdl:input>\n        <mime:content type=\"application/x-www-form-urlencoded\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <mime:mimeXml part=\"Body\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"CelsiusToFahrenheit\">\n      <http:operation location=\"/CelsiusToFahrenheit\"/>\n      <wsdl:input>\n        <mime:content type=\"application/x-www-form-urlencoded\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <mime:mimeXml part=\"Body\"/>\n      </wsdl:output>\n    </wsdl:operation>\n  </wsdl:binding>\n  <wsdl:service name=\"TempConvert\">\n    <wsdl:port name=\"TempConvertSoap\" binding=\"tns:TempConvertSoap\">\n      <soap:address location=\"http://www.w3schools.com/xml/tempconvert.asmx\"/>\n    </wsdl:port>\n    <wsdl:port name=\"TempConvertSoap12\" binding=\"tns:TempConvertSoap12\">\n      <soap12:address location=\"http://www.w3schools.com/xml/tempconvert.asmx\"/>\n    </wsdl:port>\n    <wsdl:port name=\"TempConvertHttpPost\" binding=\"tns:TempConvertHttpPost\">\n      <http:address location=\"http://www.w3schools.com/xml/tempconvert.asmx\"/>\n    </wsdl:port>\n  </wsdl:service>\n</wsdl:definitions>"
+  },
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2018-11-22 07:49:41 GMT",
+  "systemVersion" : 1,
+  "id" : "8a3ea881-2c27-4448-ac3c-354c5bb2a937"
+}

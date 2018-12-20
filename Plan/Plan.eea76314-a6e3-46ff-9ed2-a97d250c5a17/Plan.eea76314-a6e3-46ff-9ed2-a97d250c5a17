@@ -1,0 +1,16 @@
+{
+  "id" : "eea76314-a6e3-46ff-9ed2-a97d250c5a17",
+  "name" : "Silver",
+  "version" : "1.0",
+  "deprecated" : false,
+  "isProtected" : false,
+  "terms" : "You can use up to 1000 invocations per day",
+  "policies" : [ "5ded87a4-567e-45a9-a6ad-32b126d46b1d" ],
+  "cost" : {
+    "value" : "0"
+  },
+  "quota" : {
+    "enforcementPolicy" : "878dd63e-258c-4fb0-b5ce-a9d429f58326"
+  },
+  "protected" : false
+}
