@@ -115,60 +115,6 @@
         "invokePath" : "/Multiply"
       }
     }, {
-      "name" : "Add",
-      "namespace" : "http://tempuri.org/",
-      "enabled" : true,
-      "bindings" : [ {
-        "name" : "CalculatorSoap12",
-        "type" : "soap12",
-        "specifier" : "",
-        "inputMessage" : "<tem:Add xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Add>",
-        "outputMessage" : "<tem:AddResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:AddResult>3</tem:AddResult>\r\n</tem:AddResponse>"
-      }, {
-        "name" : "CalculatorSoap",
-        "type" : "soap",
-        "specifier" : "",
-        "inputMessage" : "<tem:Add xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Add>",
-        "outputMessage" : "<tem:AddResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:AddResult>3</tem:AddResult>\r\n</tem:AddResponse>"
-      } ],
-      "defined" : true,
-      "soapAction" : "http://tempuri.org/Add",
-      "isRESTInvokeEnabled" : false,
-      "restEnabledPath" : {
-        "post" : {
-          "consumes" : [ "application/json", "application/xml" ],
-          "produces" : [ "application/json", "application/xml" ],
-          "parameters" : [ ],
-          "responses" : {
-            "200" : {
-              "content" : {
-                "application/xml" : {
-                  "example" : "<tem:AddResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:AddResult>3</tem:AddResult>\r\n</tem:AddResponse>"
-                },
-                "application/json" : {
-                  "example" : "{\"AddResponse\":{\"AddResult\":3}}"
-                }
-              }
-            }
-          },
-          "enabled" : true,
-          "requestBody" : {
-            "content" : {
-              "application/xml" : {
-                "example" : "<tem:Add xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Add>"
-              },
-              "application/json" : {
-                "example" : "{\"Add\":{\"intA\":3,\"intB\":3}}"
-              }
-            },
-            "required" : false
-          }
-        },
-        "enabled" : true,
-        "name" : "Add",
-        "invokePath" : "/Add"
-      }
-    }, {
       "name" : "Divide",
       "namespace" : "http://tempuri.org/",
       "enabled" : true,
@@ -221,6 +167,60 @@
         "enabled" : true,
         "name" : "Divide",
         "invokePath" : "/Divide"
+      }
+    }, {
+      "name" : "Add",
+      "namespace" : "http://tempuri.org/",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "CalculatorSoap12",
+        "type" : "soap12",
+        "specifier" : "",
+        "inputMessage" : "<tem:Add xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Add>",
+        "outputMessage" : "<tem:AddResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:AddResult>3</tem:AddResult>\r\n</tem:AddResponse>"
+      }, {
+        "name" : "CalculatorSoap",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<tem:Add xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Add>",
+        "outputMessage" : "<tem:AddResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:AddResult>3</tem:AddResult>\r\n</tem:AddResponse>"
+      } ],
+      "defined" : true,
+      "soapAction" : "http://tempuri.org/Add",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "example" : "<tem:AddResponse xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:AddResult>3</tem:AddResult>\r\n</tem:AddResponse>"
+                },
+                "application/json" : {
+                  "example" : "{\"AddResponse\":{\"AddResult\":3}}"
+                }
+              }
+            }
+          },
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "example" : "<tem:Add xmlns:tem=\"http://tempuri.org/\">\r\n  <tem:intA>3</tem:intA>\r\n  <tem:intB>3</tem:intB>\r\n</tem:Add>"
+              },
+              "application/json" : {
+                "example" : "{\"Add\":{\"intA\":3,\"intB\":3}}"
+              }
+            },
+            "required" : false
+          }
+        },
+        "enabled" : true,
+        "name" : "Add",
+        "invokePath" : "/Add"
       }
     } ],
     "type" : "soap",

@@ -56,6 +56,7 @@
   } ],
   "apiName" : "carpark",
   "apiVersion" : "1.0",
+  "apiDescription" : "test",
   "maturityState" : "Beta",
   "isActive" : true,
   "type" : "REST",
@@ -64,7 +65,7 @@
   "scopes" : [ ],
   "publishedPortals" : [ ],
   "creationDate" : "2018-11-23 04:50:28 GMT",
-  "lastModified" : "2018-11-23 04:55:51 GMT",
+  "lastModified" : "2018-12-21 02:38:38 GMT",
   "systemVersion" : 1,
   "id" : "197a454e-1fc7-4bd7-b64b-472b4dbc6f96"
 }

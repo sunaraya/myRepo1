@@ -7,6 +7,420 @@
     "nativeUri" : [ "null/nemsdsvc/OtherPublishedReports" ],
     "serviceName" : "Other",
     "operationsInfo" : [ {
+      "name" : "SpareCapacityWebService",
+      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<oth:SpareCapacityWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:SpareCapacityWebService>",
+        "outputMessage" : "<oth:SpareCapacityWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:SpareCapacityWebServiceResponse>",
+        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "<oth:SpareCapacityWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:SpareCapacityWebServiceResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "{\"SpareCapacityWebServiceResponse\":{\"return\":\"string\"}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<oth:SpareCapacityWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:SpareCapacityWebService>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"SpareCapacityWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "SpareCapacityWebService",
+        "invokePath" : "/SpareCapacityWebService"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    }, {
+      "name" : "ReserveRequirementWebService",
+      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<oth:ReserveRequirementWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:ReserveRequirementWebService>",
+        "outputMessage" : "<oth:ReserveRequirementWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:ReserveRequirementWebServiceResponse>",
+        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "<oth:ReserveRequirementWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:ReserveRequirementWebServiceResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "{\"ReserveRequirementWebServiceResponse\":{\"return\":\"string\"}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<oth:ReserveRequirementWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:ReserveRequirementWebService>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"ReserveRequirementWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "ReserveRequirementWebService",
+        "invokePath" : "/ReserveRequirementWebService"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    }, {
+      "name" : "SecondaryReservePriceWebService",
+      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<oth:SecondaryReservePriceWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:SecondaryReservePriceWebService>",
+        "outputMessage" : "<oth:SecondaryReservePriceWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:SecondaryReservePriceWebServiceResponse>",
+        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "<oth:SecondaryReservePriceWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:SecondaryReservePriceWebServiceResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "{\"SecondaryReservePriceWebServiceResponse\":{\"return\":\"string\"}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<oth:SecondaryReservePriceWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:SecondaryReservePriceWebService>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"SecondaryReservePriceWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "SecondaryReservePriceWebService",
+        "invokePath" : "/SecondaryReservePriceWebService"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    }, {
+      "name" : "ScheduledTranmissionLossesWebService",
+      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<oth:ScheduledTranmissionLossesWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:ScheduledTranmissionLossesWebService>",
+        "outputMessage" : "<oth:ScheduledTranmissionLossesWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:ScheduledTranmissionLossesWebServiceResponse>",
+        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "<oth:ScheduledTranmissionLossesWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:ScheduledTranmissionLossesWebServiceResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "{\"ScheduledTranmissionLossesWebServiceResponse\":{\"return\":\"string\"}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<oth:ScheduledTranmissionLossesWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:ScheduledTranmissionLossesWebService>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"ScheduledTranmissionLossesWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "ScheduledTranmissionLossesWebService",
+        "invokePath" : "/ScheduledTranmissionLossesWebService"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    }, {
+      "name" : "NodalEnergyPriceWebService",
+      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<oth:NodalEnergyPriceWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:NodalEnergyPriceWebService>",
+        "outputMessage" : "<oth:NodalEnergyPriceWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:NodalEnergyPriceWebServiceResponse>",
+        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "<oth:NodalEnergyPriceWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:NodalEnergyPriceWebServiceResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "{\"NodalEnergyPriceWebServiceResponse\":{\"return\":\"string\"}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<oth:NodalEnergyPriceWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:NodalEnergyPriceWebService>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"NodalEnergyPriceWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "NodalEnergyPriceWebService",
+        "invokePath" : "/NodalEnergyPriceWebService"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    }, {
+      "name" : "RegulationPriceWebService",
+      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<oth:RegulationPriceWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:RegulationPriceWebService>",
+        "outputMessage" : "<oth:RegulationPriceWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:RegulationPriceWebServiceResponse>",
+        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "<oth:RegulationPriceWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:RegulationPriceWebServiceResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "{\"RegulationPriceWebServiceResponse\":{\"return\":\"string\"}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<oth:RegulationPriceWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:RegulationPriceWebService>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"RegulationPriceWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "RegulationPriceWebService",
+        "invokePath" : "/RegulationPriceWebService"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    }, {
       "name" : "MEUCWebService",
       "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
       "enabled" : true,
@@ -72,6 +486,75 @@
         "enabled" : true,
         "name" : "MEUCWebService",
         "invokePath" : "/MEUCWebService"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    }, {
+      "name" : "TotalAvailableOfferCapacityWebService",
+      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<oth:TotalAvailableOfferCapacityWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:TotalAvailableOfferCapacityWebService>",
+        "outputMessage" : "<oth:TotalAvailableOfferCapacityWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:TotalAvailableOfferCapacityWebServiceResponse>",
+        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "<oth:TotalAvailableOfferCapacityWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:TotalAvailableOfferCapacityWebServiceResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "{\"TotalAvailableOfferCapacityWebServiceResponse\":{\"return\":\"string\"}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<oth:TotalAvailableOfferCapacityWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:TotalAvailableOfferCapacityWebService>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"TotalAvailableOfferCapacityWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "TotalAvailableOfferCapacityWebService",
+        "invokePath" : "/TotalAvailableOfferCapacityWebService"
       },
       "scopes" : [ ],
       "tags" : [ ]
@@ -145,15 +628,15 @@
       "scopes" : [ ],
       "tags" : [ ]
     }, {
-      "name" : "SpareCapacityWebService",
+      "name" : "VestedQuantityWebService",
       "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
       "enabled" : true,
       "bindings" : [ {
         "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
         "type" : "soap",
         "specifier" : "",
-        "inputMessage" : "<oth:SpareCapacityWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:SpareCapacityWebService>",
-        "outputMessage" : "<oth:SpareCapacityWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:SpareCapacityWebServiceResponse>",
+        "inputMessage" : "<oth:VestedQuantityWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:VestedQuantityWebService>",
+        "outputMessage" : "<oth:VestedQuantityWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:VestedQuantityWebServiceResponse>",
         "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
       } ],
       "mockedResponses" : { },
@@ -173,14 +656,14 @@
                     "type" : "Schema"
                   },
                   "examples" : { },
-                  "example" : "<oth:SpareCapacityWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:SpareCapacityWebServiceResponse>"
+                  "example" : "<oth:VestedQuantityWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:VestedQuantityWebServiceResponse>"
                 },
                 "application/json" : {
                   "schema" : {
                     "type" : "Schema"
                   },
                   "examples" : { },
-                  "example" : "{\"SpareCapacityWebServiceResponse\":{\"return\":\"string\"}}"
+                  "example" : "{\"VestedQuantityWebServiceResponse\":{\"return\":\"string\"}}"
                 }
               },
               "links" : { },
@@ -196,11 +679,11 @@
             "content" : {
               "application/xml" : {
                 "examples" : { },
-                "example" : "<oth:SpareCapacityWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:SpareCapacityWebService>"
+                "example" : "<oth:VestedQuantityWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:VestedQuantityWebService>"
               },
               "application/json" : {
                 "examples" : { },
-                "example" : "{\"SpareCapacityWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
+                "example" : "{\"VestedQuantityWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
               }
             },
             "name" : "requestBody"
@@ -208,8 +691,353 @@
         },
         "parameters" : [ ],
         "enabled" : true,
-        "name" : "SpareCapacityWebService",
-        "invokePath" : "/SpareCapacityWebService"
+        "name" : "VestedQuantityWebService",
+        "invokePath" : "/VestedQuantityWebService"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    }, {
+      "name" : "GenerationWebService",
+      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<oth:GenerationWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:GenerationWebService>",
+        "outputMessage" : "<oth:GenerationWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:GenerationWebServiceResponse>",
+        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "<oth:GenerationWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:GenerationWebServiceResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "{\"GenerationWebServiceResponse\":{\"return\":\"string\"}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<oth:GenerationWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:GenerationWebService>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"GenerationWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "GenerationWebService",
+        "invokePath" : "/GenerationWebService"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    }, {
+      "name" : "USEPWebService",
+      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<oth:USEPWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:USEPWebService>",
+        "outputMessage" : "<oth:USEPWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:USEPWebServiceResponse>",
+        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "<oth:USEPWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:USEPWebServiceResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "{\"USEPWebServiceResponse\":{\"return\":\"string\"}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<oth:USEPWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:USEPWebService>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"USEPWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "USEPWebService",
+        "invokePath" : "/USEPWebService"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    }, {
+      "name" : "SystemDemandWebService",
+      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<oth:SystemDemandWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:SystemDemandWebService>",
+        "outputMessage" : "<oth:SystemDemandWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:SystemDemandWebServiceResponse>",
+        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "<oth:SystemDemandWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:SystemDemandWebServiceResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "{\"SystemDemandWebServiceResponse\":{\"return\":\"string\"}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<oth:SystemDemandWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:SystemDemandWebService>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"SystemDemandWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "SystemDemandWebService",
+        "invokePath" : "/SystemDemandWebService"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    }, {
+      "name" : "MarketShareWEQWebService",
+      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<oth:MarketShareWEQWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:MarketShareWEQWebService>",
+        "outputMessage" : "<oth:MarketShareWEQWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:MarketShareWEQWebServiceResponse>",
+        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "<oth:MarketShareWEQWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:MarketShareWEQWebServiceResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "{\"MarketShareWEQWebServiceResponse\":{\"return\":\"string\"}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<oth:MarketShareWEQWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:MarketShareWEQWebService>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"MarketShareWEQWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "MarketShareWEQWebService",
+        "invokePath" : "/MarketShareWEQWebService"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    }, {
+      "name" : "MarketShareGenWebService",
+      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<oth:MarketShareGenWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:MarketShareGenWebService>",
+        "outputMessage" : "<oth:MarketShareGenWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:MarketShareGenWebServiceResponse>",
+        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "<oth:MarketShareGenWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:MarketShareGenWebServiceResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "Schema"
+                  },
+                  "examples" : { },
+                  "example" : "{\"MarketShareGenWebServiceResponse\":{\"return\":\"string\"}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<oth:MarketShareGenWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:MarketShareGenWebService>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"MarketShareGenWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "MarketShareGenWebService",
+        "invokePath" : "/MarketShareGenWebService"
       },
       "scopes" : [ ],
       "tags" : [ ]
@@ -362,420 +1190,6 @@
       "scopes" : [ ],
       "tags" : [ ]
     }, {
-      "name" : "HEUCWebService",
-      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
-      "enabled" : true,
-      "bindings" : [ {
-        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
-        "type" : "soap",
-        "specifier" : "",
-        "inputMessage" : "<oth:HEUCWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:HEUCWebService>",
-        "outputMessage" : "<oth:HEUCWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:HEUCWebServiceResponse>",
-        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
-      } ],
-      "mockedResponses" : { },
-      "mockedConditionsBasedCustomResponsesList" : [ ],
-      "defined" : true,
-      "soapAction" : "",
-      "isRESTInvokeEnabled" : true,
-      "restEnabledPath" : {
-        "post" : {
-          "consumes" : [ "application/json", "application/xml" ],
-          "produces" : [ "application/json", "application/xml" ],
-          "responses" : {
-            "200" : {
-              "content" : {
-                "application/xml" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "<oth:HEUCWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:HEUCWebServiceResponse>"
-                },
-                "application/json" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "{\"HEUCWebServiceResponse\":{\"return\":\"string\"}}"
-                }
-              },
-              "links" : { },
-              "schema" : { },
-              "examples" : { },
-              "headers" : { }
-            }
-          },
-          "mockedResponses" : { },
-          "mockedConditionsBasedCustomResponsesList" : [ ],
-          "enabled" : true,
-          "requestBody" : {
-            "content" : {
-              "application/xml" : {
-                "examples" : { },
-                "example" : "<oth:HEUCWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:HEUCWebService>"
-              },
-              "application/json" : {
-                "examples" : { },
-                "example" : "{\"HEUCWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
-              }
-            },
-            "name" : "requestBody"
-          }
-        },
-        "parameters" : [ ],
-        "enabled" : true,
-        "name" : "HEUCWebService",
-        "invokePath" : "/HEUCWebService"
-      },
-      "scopes" : [ ],
-      "tags" : [ ]
-    }, {
-      "name" : "ScheduledTranmissionLossesWebService",
-      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
-      "enabled" : true,
-      "bindings" : [ {
-        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
-        "type" : "soap",
-        "specifier" : "",
-        "inputMessage" : "<oth:ScheduledTranmissionLossesWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:ScheduledTranmissionLossesWebService>",
-        "outputMessage" : "<oth:ScheduledTranmissionLossesWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:ScheduledTranmissionLossesWebServiceResponse>",
-        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
-      } ],
-      "mockedResponses" : { },
-      "mockedConditionsBasedCustomResponsesList" : [ ],
-      "defined" : true,
-      "soapAction" : "",
-      "isRESTInvokeEnabled" : true,
-      "restEnabledPath" : {
-        "post" : {
-          "consumes" : [ "application/json", "application/xml" ],
-          "produces" : [ "application/json", "application/xml" ],
-          "responses" : {
-            "200" : {
-              "content" : {
-                "application/xml" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "<oth:ScheduledTranmissionLossesWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:ScheduledTranmissionLossesWebServiceResponse>"
-                },
-                "application/json" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "{\"ScheduledTranmissionLossesWebServiceResponse\":{\"return\":\"string\"}}"
-                }
-              },
-              "links" : { },
-              "schema" : { },
-              "examples" : { },
-              "headers" : { }
-            }
-          },
-          "mockedResponses" : { },
-          "mockedConditionsBasedCustomResponsesList" : [ ],
-          "enabled" : true,
-          "requestBody" : {
-            "content" : {
-              "application/xml" : {
-                "examples" : { },
-                "example" : "<oth:ScheduledTranmissionLossesWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:ScheduledTranmissionLossesWebService>"
-              },
-              "application/json" : {
-                "examples" : { },
-                "example" : "{\"ScheduledTranmissionLossesWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
-              }
-            },
-            "name" : "requestBody"
-          }
-        },
-        "parameters" : [ ],
-        "enabled" : true,
-        "name" : "ScheduledTranmissionLossesWebService",
-        "invokePath" : "/ScheduledTranmissionLossesWebService"
-      },
-      "scopes" : [ ],
-      "tags" : [ ]
-    }, {
-      "name" : "VestedQuantityWebService",
-      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
-      "enabled" : true,
-      "bindings" : [ {
-        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
-        "type" : "soap",
-        "specifier" : "",
-        "inputMessage" : "<oth:VestedQuantityWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:VestedQuantityWebService>",
-        "outputMessage" : "<oth:VestedQuantityWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:VestedQuantityWebServiceResponse>",
-        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
-      } ],
-      "mockedResponses" : { },
-      "mockedConditionsBasedCustomResponsesList" : [ ],
-      "defined" : true,
-      "soapAction" : "",
-      "isRESTInvokeEnabled" : true,
-      "restEnabledPath" : {
-        "post" : {
-          "consumes" : [ "application/json", "application/xml" ],
-          "produces" : [ "application/json", "application/xml" ],
-          "responses" : {
-            "200" : {
-              "content" : {
-                "application/xml" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "<oth:VestedQuantityWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:VestedQuantityWebServiceResponse>"
-                },
-                "application/json" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "{\"VestedQuantityWebServiceResponse\":{\"return\":\"string\"}}"
-                }
-              },
-              "links" : { },
-              "schema" : { },
-              "examples" : { },
-              "headers" : { }
-            }
-          },
-          "mockedResponses" : { },
-          "mockedConditionsBasedCustomResponsesList" : [ ],
-          "enabled" : true,
-          "requestBody" : {
-            "content" : {
-              "application/xml" : {
-                "examples" : { },
-                "example" : "<oth:VestedQuantityWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:VestedQuantityWebService>"
-              },
-              "application/json" : {
-                "examples" : { },
-                "example" : "{\"VestedQuantityWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
-              }
-            },
-            "name" : "requestBody"
-          }
-        },
-        "parameters" : [ ],
-        "enabled" : true,
-        "name" : "VestedQuantityWebService",
-        "invokePath" : "/VestedQuantityWebService"
-      },
-      "scopes" : [ ],
-      "tags" : [ ]
-    }, {
-      "name" : "NodalEnergyPriceWebService",
-      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
-      "enabled" : true,
-      "bindings" : [ {
-        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
-        "type" : "soap",
-        "specifier" : "",
-        "inputMessage" : "<oth:NodalEnergyPriceWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:NodalEnergyPriceWebService>",
-        "outputMessage" : "<oth:NodalEnergyPriceWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:NodalEnergyPriceWebServiceResponse>",
-        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
-      } ],
-      "mockedResponses" : { },
-      "mockedConditionsBasedCustomResponsesList" : [ ],
-      "defined" : true,
-      "soapAction" : "",
-      "isRESTInvokeEnabled" : true,
-      "restEnabledPath" : {
-        "post" : {
-          "consumes" : [ "application/json", "application/xml" ],
-          "produces" : [ "application/json", "application/xml" ],
-          "responses" : {
-            "200" : {
-              "content" : {
-                "application/xml" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "<oth:NodalEnergyPriceWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:NodalEnergyPriceWebServiceResponse>"
-                },
-                "application/json" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "{\"NodalEnergyPriceWebServiceResponse\":{\"return\":\"string\"}}"
-                }
-              },
-              "links" : { },
-              "schema" : { },
-              "examples" : { },
-              "headers" : { }
-            }
-          },
-          "mockedResponses" : { },
-          "mockedConditionsBasedCustomResponsesList" : [ ],
-          "enabled" : true,
-          "requestBody" : {
-            "content" : {
-              "application/xml" : {
-                "examples" : { },
-                "example" : "<oth:NodalEnergyPriceWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:NodalEnergyPriceWebService>"
-              },
-              "application/json" : {
-                "examples" : { },
-                "example" : "{\"NodalEnergyPriceWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
-              }
-            },
-            "name" : "requestBody"
-          }
-        },
-        "parameters" : [ ],
-        "enabled" : true,
-        "name" : "NodalEnergyPriceWebService",
-        "invokePath" : "/NodalEnergyPriceWebService"
-      },
-      "scopes" : [ ],
-      "tags" : [ ]
-    }, {
-      "name" : "USEPWebService",
-      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
-      "enabled" : true,
-      "bindings" : [ {
-        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
-        "type" : "soap",
-        "specifier" : "",
-        "inputMessage" : "<oth:USEPWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:USEPWebService>",
-        "outputMessage" : "<oth:USEPWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:USEPWebServiceResponse>",
-        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
-      } ],
-      "mockedResponses" : { },
-      "mockedConditionsBasedCustomResponsesList" : [ ],
-      "defined" : true,
-      "soapAction" : "",
-      "isRESTInvokeEnabled" : true,
-      "restEnabledPath" : {
-        "post" : {
-          "consumes" : [ "application/json", "application/xml" ],
-          "produces" : [ "application/json", "application/xml" ],
-          "responses" : {
-            "200" : {
-              "content" : {
-                "application/xml" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "<oth:USEPWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:USEPWebServiceResponse>"
-                },
-                "application/json" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "{\"USEPWebServiceResponse\":{\"return\":\"string\"}}"
-                }
-              },
-              "links" : { },
-              "schema" : { },
-              "examples" : { },
-              "headers" : { }
-            }
-          },
-          "mockedResponses" : { },
-          "mockedConditionsBasedCustomResponsesList" : [ ],
-          "enabled" : true,
-          "requestBody" : {
-            "content" : {
-              "application/xml" : {
-                "examples" : { },
-                "example" : "<oth:USEPWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:USEPWebService>"
-              },
-              "application/json" : {
-                "examples" : { },
-                "example" : "{\"USEPWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
-              }
-            },
-            "name" : "requestBody"
-          }
-        },
-        "parameters" : [ ],
-        "enabled" : true,
-        "name" : "USEPWebService",
-        "invokePath" : "/USEPWebService"
-      },
-      "scopes" : [ ],
-      "tags" : [ ]
-    }, {
-      "name" : "MarketShareWEQWebService",
-      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
-      "enabled" : true,
-      "bindings" : [ {
-        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
-        "type" : "soap",
-        "specifier" : "",
-        "inputMessage" : "<oth:MarketShareWEQWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:MarketShareWEQWebService>",
-        "outputMessage" : "<oth:MarketShareWEQWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:MarketShareWEQWebServiceResponse>",
-        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
-      } ],
-      "mockedResponses" : { },
-      "mockedConditionsBasedCustomResponsesList" : [ ],
-      "defined" : true,
-      "soapAction" : "",
-      "isRESTInvokeEnabled" : true,
-      "restEnabledPath" : {
-        "post" : {
-          "consumes" : [ "application/json", "application/xml" ],
-          "produces" : [ "application/json", "application/xml" ],
-          "responses" : {
-            "200" : {
-              "content" : {
-                "application/xml" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "<oth:MarketShareWEQWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:MarketShareWEQWebServiceResponse>"
-                },
-                "application/json" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "{\"MarketShareWEQWebServiceResponse\":{\"return\":\"string\"}}"
-                }
-              },
-              "links" : { },
-              "schema" : { },
-              "examples" : { },
-              "headers" : { }
-            }
-          },
-          "mockedResponses" : { },
-          "mockedConditionsBasedCustomResponsesList" : [ ],
-          "enabled" : true,
-          "requestBody" : {
-            "content" : {
-              "application/xml" : {
-                "examples" : { },
-                "example" : "<oth:MarketShareWEQWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:MarketShareWEQWebService>"
-              },
-              "application/json" : {
-                "examples" : { },
-                "example" : "{\"MarketShareWEQWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
-              }
-            },
-            "name" : "requestBody"
-          }
-        },
-        "parameters" : [ ],
-        "enabled" : true,
-        "name" : "MarketShareWEQWebService",
-        "invokePath" : "/MarketShareWEQWebService"
-      },
-      "scopes" : [ ],
-      "tags" : [ ]
-    }, {
       "name" : "DelayedOfferStacksWebService",
       "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
       "enabled" : true,
@@ -845,15 +1259,15 @@
       "scopes" : [ ],
       "tags" : [ ]
     }, {
-      "name" : "GenerationWebService",
+      "name" : "HEUCWebService",
       "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
       "enabled" : true,
       "bindings" : [ {
         "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
         "type" : "soap",
         "specifier" : "",
-        "inputMessage" : "<oth:GenerationWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:GenerationWebService>",
-        "outputMessage" : "<oth:GenerationWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:GenerationWebServiceResponse>",
+        "inputMessage" : "<oth:HEUCWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:HEUCWebService>",
+        "outputMessage" : "<oth:HEUCWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:HEUCWebServiceResponse>",
         "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
       } ],
       "mockedResponses" : { },
@@ -873,14 +1287,14 @@
                     "type" : "Schema"
                   },
                   "examples" : { },
-                  "example" : "<oth:GenerationWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:GenerationWebServiceResponse>"
+                  "example" : "<oth:HEUCWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:HEUCWebServiceResponse>"
                 },
                 "application/json" : {
                   "schema" : {
                     "type" : "Schema"
                   },
                   "examples" : { },
-                  "example" : "{\"GenerationWebServiceResponse\":{\"return\":\"string\"}}"
+                  "example" : "{\"HEUCWebServiceResponse\":{\"return\":\"string\"}}"
                 }
               },
               "links" : { },
@@ -896,11 +1310,11 @@
             "content" : {
               "application/xml" : {
                 "examples" : { },
-                "example" : "<oth:GenerationWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:GenerationWebService>"
+                "example" : "<oth:HEUCWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:HEUCWebService>"
               },
               "application/json" : {
                 "examples" : { },
-                "example" : "{\"GenerationWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
+                "example" : "{\"HEUCWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
               }
             },
             "name" : "requestBody"
@@ -908,8 +1322,8 @@
         },
         "parameters" : [ ],
         "enabled" : true,
-        "name" : "GenerationWebService",
-        "invokePath" : "/GenerationWebService"
+        "name" : "HEUCWebService",
+        "invokePath" : "/HEUCWebService"
       },
       "scopes" : [ ],
       "tags" : [ ]
@@ -979,420 +1393,6 @@
         "enabled" : true,
         "name" : "ReserveCostWebService",
         "invokePath" : "/ReserveCostWebService"
-      },
-      "scopes" : [ ],
-      "tags" : [ ]
-    }, {
-      "name" : "MarketShareGenWebService",
-      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
-      "enabled" : true,
-      "bindings" : [ {
-        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
-        "type" : "soap",
-        "specifier" : "",
-        "inputMessage" : "<oth:MarketShareGenWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:MarketShareGenWebService>",
-        "outputMessage" : "<oth:MarketShareGenWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:MarketShareGenWebServiceResponse>",
-        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
-      } ],
-      "mockedResponses" : { },
-      "mockedConditionsBasedCustomResponsesList" : [ ],
-      "defined" : true,
-      "soapAction" : "",
-      "isRESTInvokeEnabled" : true,
-      "restEnabledPath" : {
-        "post" : {
-          "consumes" : [ "application/json", "application/xml" ],
-          "produces" : [ "application/json", "application/xml" ],
-          "responses" : {
-            "200" : {
-              "content" : {
-                "application/xml" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "<oth:MarketShareGenWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:MarketShareGenWebServiceResponse>"
-                },
-                "application/json" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "{\"MarketShareGenWebServiceResponse\":{\"return\":\"string\"}}"
-                }
-              },
-              "links" : { },
-              "schema" : { },
-              "examples" : { },
-              "headers" : { }
-            }
-          },
-          "mockedResponses" : { },
-          "mockedConditionsBasedCustomResponsesList" : [ ],
-          "enabled" : true,
-          "requestBody" : {
-            "content" : {
-              "application/xml" : {
-                "examples" : { },
-                "example" : "<oth:MarketShareGenWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:MarketShareGenWebService>"
-              },
-              "application/json" : {
-                "examples" : { },
-                "example" : "{\"MarketShareGenWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
-              }
-            },
-            "name" : "requestBody"
-          }
-        },
-        "parameters" : [ ],
-        "enabled" : true,
-        "name" : "MarketShareGenWebService",
-        "invokePath" : "/MarketShareGenWebService"
-      },
-      "scopes" : [ ],
-      "tags" : [ ]
-    }, {
-      "name" : "TotalAvailableOfferCapacityWebService",
-      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
-      "enabled" : true,
-      "bindings" : [ {
-        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
-        "type" : "soap",
-        "specifier" : "",
-        "inputMessage" : "<oth:TotalAvailableOfferCapacityWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:TotalAvailableOfferCapacityWebService>",
-        "outputMessage" : "<oth:TotalAvailableOfferCapacityWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:TotalAvailableOfferCapacityWebServiceResponse>",
-        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
-      } ],
-      "mockedResponses" : { },
-      "mockedConditionsBasedCustomResponsesList" : [ ],
-      "defined" : true,
-      "soapAction" : "",
-      "isRESTInvokeEnabled" : true,
-      "restEnabledPath" : {
-        "post" : {
-          "consumes" : [ "application/json", "application/xml" ],
-          "produces" : [ "application/json", "application/xml" ],
-          "responses" : {
-            "200" : {
-              "content" : {
-                "application/xml" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "<oth:TotalAvailableOfferCapacityWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:TotalAvailableOfferCapacityWebServiceResponse>"
-                },
-                "application/json" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "{\"TotalAvailableOfferCapacityWebServiceResponse\":{\"return\":\"string\"}}"
-                }
-              },
-              "links" : { },
-              "schema" : { },
-              "examples" : { },
-              "headers" : { }
-            }
-          },
-          "mockedResponses" : { },
-          "mockedConditionsBasedCustomResponsesList" : [ ],
-          "enabled" : true,
-          "requestBody" : {
-            "content" : {
-              "application/xml" : {
-                "examples" : { },
-                "example" : "<oth:TotalAvailableOfferCapacityWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:TotalAvailableOfferCapacityWebService>"
-              },
-              "application/json" : {
-                "examples" : { },
-                "example" : "{\"TotalAvailableOfferCapacityWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
-              }
-            },
-            "name" : "requestBody"
-          }
-        },
-        "parameters" : [ ],
-        "enabled" : true,
-        "name" : "TotalAvailableOfferCapacityWebService",
-        "invokePath" : "/TotalAvailableOfferCapacityWebService"
-      },
-      "scopes" : [ ],
-      "tags" : [ ]
-    }, {
-      "name" : "SecondaryReservePriceWebService",
-      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
-      "enabled" : true,
-      "bindings" : [ {
-        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
-        "type" : "soap",
-        "specifier" : "",
-        "inputMessage" : "<oth:SecondaryReservePriceWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:SecondaryReservePriceWebService>",
-        "outputMessage" : "<oth:SecondaryReservePriceWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:SecondaryReservePriceWebServiceResponse>",
-        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
-      } ],
-      "mockedResponses" : { },
-      "mockedConditionsBasedCustomResponsesList" : [ ],
-      "defined" : true,
-      "soapAction" : "",
-      "isRESTInvokeEnabled" : true,
-      "restEnabledPath" : {
-        "post" : {
-          "consumes" : [ "application/json", "application/xml" ],
-          "produces" : [ "application/json", "application/xml" ],
-          "responses" : {
-            "200" : {
-              "content" : {
-                "application/xml" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "<oth:SecondaryReservePriceWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:SecondaryReservePriceWebServiceResponse>"
-                },
-                "application/json" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "{\"SecondaryReservePriceWebServiceResponse\":{\"return\":\"string\"}}"
-                }
-              },
-              "links" : { },
-              "schema" : { },
-              "examples" : { },
-              "headers" : { }
-            }
-          },
-          "mockedResponses" : { },
-          "mockedConditionsBasedCustomResponsesList" : [ ],
-          "enabled" : true,
-          "requestBody" : {
-            "content" : {
-              "application/xml" : {
-                "examples" : { },
-                "example" : "<oth:SecondaryReservePriceWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:SecondaryReservePriceWebService>"
-              },
-              "application/json" : {
-                "examples" : { },
-                "example" : "{\"SecondaryReservePriceWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
-              }
-            },
-            "name" : "requestBody"
-          }
-        },
-        "parameters" : [ ],
-        "enabled" : true,
-        "name" : "SecondaryReservePriceWebService",
-        "invokePath" : "/SecondaryReservePriceWebService"
-      },
-      "scopes" : [ ],
-      "tags" : [ ]
-    }, {
-      "name" : "SystemDemandWebService",
-      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
-      "enabled" : true,
-      "bindings" : [ {
-        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
-        "type" : "soap",
-        "specifier" : "",
-        "inputMessage" : "<oth:SystemDemandWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:SystemDemandWebService>",
-        "outputMessage" : "<oth:SystemDemandWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:SystemDemandWebServiceResponse>",
-        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
-      } ],
-      "mockedResponses" : { },
-      "mockedConditionsBasedCustomResponsesList" : [ ],
-      "defined" : true,
-      "soapAction" : "",
-      "isRESTInvokeEnabled" : true,
-      "restEnabledPath" : {
-        "post" : {
-          "consumes" : [ "application/json", "application/xml" ],
-          "produces" : [ "application/json", "application/xml" ],
-          "responses" : {
-            "200" : {
-              "content" : {
-                "application/xml" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "<oth:SystemDemandWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:SystemDemandWebServiceResponse>"
-                },
-                "application/json" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "{\"SystemDemandWebServiceResponse\":{\"return\":\"string\"}}"
-                }
-              },
-              "links" : { },
-              "schema" : { },
-              "examples" : { },
-              "headers" : { }
-            }
-          },
-          "mockedResponses" : { },
-          "mockedConditionsBasedCustomResponsesList" : [ ],
-          "enabled" : true,
-          "requestBody" : {
-            "content" : {
-              "application/xml" : {
-                "examples" : { },
-                "example" : "<oth:SystemDemandWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:SystemDemandWebService>"
-              },
-              "application/json" : {
-                "examples" : { },
-                "example" : "{\"SystemDemandWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
-              }
-            },
-            "name" : "requestBody"
-          }
-        },
-        "parameters" : [ ],
-        "enabled" : true,
-        "name" : "SystemDemandWebService",
-        "invokePath" : "/SystemDemandWebService"
-      },
-      "scopes" : [ ],
-      "tags" : [ ]
-    }, {
-      "name" : "ReserveRequirementWebService",
-      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
-      "enabled" : true,
-      "bindings" : [ {
-        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
-        "type" : "soap",
-        "specifier" : "",
-        "inputMessage" : "<oth:ReserveRequirementWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:ReserveRequirementWebService>",
-        "outputMessage" : "<oth:ReserveRequirementWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:ReserveRequirementWebServiceResponse>",
-        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
-      } ],
-      "mockedResponses" : { },
-      "mockedConditionsBasedCustomResponsesList" : [ ],
-      "defined" : true,
-      "soapAction" : "",
-      "isRESTInvokeEnabled" : true,
-      "restEnabledPath" : {
-        "post" : {
-          "consumes" : [ "application/json", "application/xml" ],
-          "produces" : [ "application/json", "application/xml" ],
-          "responses" : {
-            "200" : {
-              "content" : {
-                "application/xml" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "<oth:ReserveRequirementWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:ReserveRequirementWebServiceResponse>"
-                },
-                "application/json" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "{\"ReserveRequirementWebServiceResponse\":{\"return\":\"string\"}}"
-                }
-              },
-              "links" : { },
-              "schema" : { },
-              "examples" : { },
-              "headers" : { }
-            }
-          },
-          "mockedResponses" : { },
-          "mockedConditionsBasedCustomResponsesList" : [ ],
-          "enabled" : true,
-          "requestBody" : {
-            "content" : {
-              "application/xml" : {
-                "examples" : { },
-                "example" : "<oth:ReserveRequirementWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:ReserveRequirementWebService>"
-              },
-              "application/json" : {
-                "examples" : { },
-                "example" : "{\"ReserveRequirementWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
-              }
-            },
-            "name" : "requestBody"
-          }
-        },
-        "parameters" : [ ],
-        "enabled" : true,
-        "name" : "ReserveRequirementWebService",
-        "invokePath" : "/ReserveRequirementWebService"
-      },
-      "scopes" : [ ],
-      "tags" : [ ]
-    }, {
-      "name" : "RegulationPriceWebService",
-      "namespace" : "http://com/emc/nems/wsd/webservices/reports/otherpubdata",
-      "enabled" : true,
-      "bindings" : [ {
-        "name" : "OtherPublishedDataWebServiceServiceSoapBinding",
-        "type" : "soap",
-        "specifier" : "",
-        "inputMessage" : "<oth:RegulationPriceWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:RegulationPriceWebService>",
-        "outputMessage" : "<oth:RegulationPriceWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:RegulationPriceWebServiceResponse>",
-        "faultMessages" : [ "<java:InvalidInputDataException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:InvalidInputDataException>", "<java:NoRecordFoundException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:NoRecordFoundException>", "<java:DatabaseException xmlns:java=\"java:com.emc.nems.wsd.core.utils.exceptions\" xmlns:java1=\"java:com.emc.nems.oms.core.utils.exceptions\">\r\n  <java1:Errorcode>string</java1:Errorcode>\r\n  <java1:Message>string</java1:Message>\r\n</java:DatabaseException>" ]
-      } ],
-      "mockedResponses" : { },
-      "mockedConditionsBasedCustomResponsesList" : [ ],
-      "defined" : true,
-      "soapAction" : "",
-      "isRESTInvokeEnabled" : true,
-      "restEnabledPath" : {
-        "post" : {
-          "consumes" : [ "application/json", "application/xml" ],
-          "produces" : [ "application/json", "application/xml" ],
-          "responses" : {
-            "200" : {
-              "content" : {
-                "application/xml" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "<oth:RegulationPriceWebServiceResponse xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\">\r\n  <oth:return>string</oth:return>\r\n</oth:RegulationPriceWebServiceResponse>"
-                },
-                "application/json" : {
-                  "schema" : {
-                    "type" : "Schema"
-                  },
-                  "examples" : { },
-                  "example" : "{\"RegulationPriceWebServiceResponse\":{\"return\":\"string\"}}"
-                }
-              },
-              "links" : { },
-              "schema" : { },
-              "examples" : { },
-              "headers" : { }
-            }
-          },
-          "mockedResponses" : { },
-          "mockedConditionsBasedCustomResponsesList" : [ ],
-          "enabled" : true,
-          "requestBody" : {
-            "content" : {
-              "application/xml" : {
-                "examples" : { },
-                "example" : "<oth:RegulationPriceWebService xmlns:oth=\"http://com/emc/nems/wsd/webservices/reports/otherpubdata\" xmlns:java=\"java:com.emc.nems.wsd.ui.beans.reports\">\r\n  <oth:reportBean>\r\n    <!--Zero or more repetitions:-->\r\n    <java:ReportBean>\r\n      <java:ParamName>string</java:ParamName>\r\n      <java:ParamValue>string</java:ParamValue>\r\n    </java:ReportBean>\r\n  </oth:reportBean>\r\n</oth:RegulationPriceWebService>"
-              },
-              "application/json" : {
-                "examples" : { },
-                "example" : "{\"RegulationPriceWebService\":{\"reportBean\":{\"ReportBean\":{\"ParamName\":\"string\",\"ParamValue\":\"string\"}}}}"
-              }
-            },
-            "name" : "requestBody"
-          }
-        },
-        "parameters" : [ ],
-        "enabled" : true,
-        "name" : "RegulationPriceWebService",
-        "invokePath" : "/RegulationPriceWebService"
       },
       "scopes" : [ ],
       "tags" : [ ]
